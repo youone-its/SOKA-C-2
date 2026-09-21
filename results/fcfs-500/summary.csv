@@ -1,0 +1,2 @@
+algorithm,hosts,vms,tasks,seed,completed,makespan_s,estimated_makespan_s,compute_cost
+FCFS,4,10,500,42,500,1739.442036,1739.457333,25.181112
