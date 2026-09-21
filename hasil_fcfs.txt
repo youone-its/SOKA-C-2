@@ -1,0 +1,2208 @@
+❯ bash run-fcfs.sh 200 8 42 FCFS results/fcfs-200
+
+Initialising...
+Starting CloudSim version 7.0
+0.0: Datacenter is starting...
+0.0: Broker is starting...
+Entities started.
+0.0: Broker: Cloud Resource List received with 1 datacenter(s)
+0.0: Broker: Trying to Create Vm #0 in Datacenter
+0.0: Broker: Trying to Create Vm #1 in Datacenter
+0.0: Broker: Trying to Create Vm #2 in Datacenter
+0.0: Broker: Trying to Create Vm #3 in Datacenter
+0.0: Broker: Trying to Create Vm #4 in Datacenter
+0.0: Broker: Trying to Create Vm #5 in Datacenter
+0.0: Broker: Trying to Create Vm #6 in Datacenter
+0.0: Broker: Trying to Create Vm #7 in Datacenter
+0.0: Datacenter.guestAllocator: Vm #0 has been allocated to Host #0
+0.0: Datacenter.guestAllocator: Vm #1 has been allocated to Host #1
+0.0: Datacenter.guestAllocator: Vm #2 has been allocated to Host #2
+0.0: Datacenter.guestAllocator: Vm #3 has been allocated to Host #3
+0.0: Datacenter.guestAllocator: Vm #4 has been allocated to Host #0
+0.0: Datacenter.guestAllocator: Vm #5 has been allocated to Host #1
+0.0: Datacenter.guestAllocator: Vm #6 has been allocated to Host #2
+0.0: Datacenter.guestAllocator: Vm #7 has been allocated to Host #3
+1.0E-6: Broker: Vm #0 has been created in Datacenter #2, Host #0
+1.0E-6: Broker: Vm #1 has been created in Datacenter #2, Host #1
+1.0E-6: Broker: Vm #2 has been created in Datacenter #2, Host #2
+1.0E-6: Broker: Vm #3 has been created in Datacenter #2, Host #3
+1.0E-6: Broker: Vm #4 has been created in Datacenter #2, Host #0
+1.0E-6: Broker: Vm #5 has been created in Datacenter #2, Host #1
+1.0E-6: Broker: Vm #6 has been created in Datacenter #2, Host #2
+1.0E-6: Broker: Vm #7 has been created in Datacenter #2, Host #3
+1.0E-6: Broker: Sending Cloudlet #0 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #1 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #2 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #3 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #4 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #5 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #6 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #7 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #8 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #9 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #10 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #11 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #12 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #13 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #14 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #15 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #16 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #17 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #18 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #19 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #20 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #21 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #22 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #23 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #24 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #25 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #26 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #27 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #28 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #29 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #30 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #31 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #32 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #33 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #34 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #35 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #36 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #37 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #38 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #39 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #40 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #41 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #42 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #43 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #44 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #45 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #46 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #47 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #48 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #49 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #50 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #51 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #52 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #53 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #54 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #55 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #56 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #57 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #58 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #59 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #60 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #61 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #62 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #63 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #64 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #65 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #66 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #67 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #68 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #69 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #70 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #71 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #72 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #73 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #74 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #75 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #76 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #77 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #78 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #79 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #80 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #81 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #82 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #83 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #84 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #85 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #86 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #87 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #88 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #89 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #90 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #91 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #92 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #93 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #94 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #95 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #96 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #97 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #98 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #99 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #100 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #101 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #102 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #103 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #104 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #105 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #106 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #107 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #108 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #109 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #110 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #111 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #112 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #113 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #114 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #115 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #116 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #117 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #118 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #119 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #120 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #121 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #122 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #123 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #124 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #125 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #126 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #127 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #128 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #129 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #130 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #131 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #132 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #133 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #134 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #135 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #136 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #137 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #138 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #139 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #140 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #141 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #142 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #143 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #144 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #145 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #146 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #147 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #148 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #149 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #150 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #151 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #152 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #153 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #154 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #155 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #156 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #157 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #158 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #159 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #160 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #161 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #162 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #163 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #164 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #165 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #166 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #167 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #168 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #169 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #170 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #171 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #172 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #173 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #174 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #175 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #176 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #177 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #178 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #179 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #180 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #181 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #182 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #183 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #184 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #185 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #186 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #187 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #188 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #189 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #190 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #191 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #192 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #193 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #194 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #195 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #196 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #197 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #198 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #199 to Vm #2
+6.365601: Broker: Cloudlet #3 return received
+6.365601: Broker: The number of finished Cloudlets is:1
+7.704934333333333: Broker: Cloudlet #5 return received
+7.704934333333333: Broker: The number of finished Cloudlets is:2
+17.446834333333335: Broker: Cloudlet #2 return received
+17.446834333333335: Broker: The number of finished Cloudlets is:3
+19.705234333333337: Broker: Cloudlet #8 return received
+19.705234333333337: Broker: The number of finished Cloudlets is:4
+23.769234333333337: Broker: Cloudlet #0 return received
+23.769234333333337: Broker: The number of finished Cloudlets is:5
+30.031234333333337: Broker: Cloudlet #6 return received
+30.031234333333337: Broker: The number of finished Cloudlets is:6
+33.69483433333334: Broker: Cloudlet #7 return received
+33.69483433333334: Broker: The number of finished Cloudlets is:7
+46.476101: Broker: Cloudlet #4 return received
+46.476101: Broker: The number of finished Cloudlets is:8
+48.72093433333333: Broker: Cloudlet #10 return received
+48.72093433333333: Broker: The number of finished Cloudlets is:9
+52.17373433333333: Broker: Cloudlet #14 return received
+52.17373433333333: Broker: The number of finished Cloudlets is:10
+53.31173433333333: Broker: Cloudlet #9 return received
+53.31173433333333: Broker: The number of finished Cloudlets is:11
+54.87173433333333: Broker: Cloudlet #12 return received
+54.87173433333333: Broker: The number of finished Cloudlets is:12
+57.74693433333333: Broker: Cloudlet #11 return received
+57.74693433333333: Broker: The number of finished Cloudlets is:13
+58.493601: Broker: Cloudlet #1 return received
+58.493601: Broker: The number of finished Cloudlets is:14
+64.04936766666667: Broker: Cloudlet #17 return received
+64.04936766666667: Broker: The number of finished Cloudlets is:15
+66.06833433333333: Broker: Cloudlet #21 return received
+66.06833433333333: Broker: The number of finished Cloudlets is:16
+77.34230099999999: Broker: Cloudlet #13 return received
+77.34230099999999: Broker: The number of finished Cloudlets is:17
+78.107101: Broker: Cloudlet #18 return received
+78.107101: Broker: The number of finished Cloudlets is:18
+83.424601: Broker: Cloudlet #16 return received
+83.424601: Broker: The number of finished Cloudlets is:19
+84.84660099999999: Broker: Cloudlet #15 return received
+84.84660099999999: Broker: The number of finished Cloudlets is:20
+85.33740099999999: Broker: Cloudlet #22 return received
+85.33740099999999: Broker: The number of finished Cloudlets is:21
+91.51900099999999: Broker: Cloudlet #20 return received
+91.51900099999999: Broker: The number of finished Cloudlets is:22
+106.38103433333332: Broker: Cloudlet #23 return received
+106.38103433333332: Broker: The number of finished Cloudlets is:23
+107.00603433333332: Broker: Cloudlet #19 return received
+107.00603433333332: Broker: The number of finished Cloudlets is:24
+115.01866766666666: Broker: Cloudlet #28 return received
+115.01866766666666: Broker: The number of finished Cloudlets is:25
+118.09766766666665: Broker: Cloudlet #26 return received
+118.09766766666665: Broker: The number of finished Cloudlets is:26
+123.60850099999998: Broker: Cloudlet #25 return received
+123.60850099999998: Broker: The number of finished Cloudlets is:27
+123.77100099999997: Broker: Cloudlet #24 return received
+123.77100099999997: Broker: The number of finished Cloudlets is:28
+126.68983433333331: Broker: Cloudlet #29 return received
+126.68983433333331: Broker: The number of finished Cloudlets is:29
+139.34420099999997: Broker: Cloudlet #36 return received
+139.34420099999997: Broker: The number of finished Cloudlets is:30
+148.22170099999997: Broker: Cloudlet #33 return received
+148.22170099999997: Broker: The number of finished Cloudlets is:31
+150.04810099999997: Broker: Cloudlet #32 return received
+150.04810099999997: Broker: The number of finished Cloudlets is:32
+151.08276766666665: Broker: Cloudlet #30 return received
+151.08276766666665: Broker: The number of finished Cloudlets is:33
+164.34276766666665: Broker: Cloudlet #27 return received
+164.34276766666665: Broker: The number of finished Cloudlets is:34
+165.62426766666664: Broker: Cloudlet #38 return received
+165.62426766666664: Broker: The number of finished Cloudlets is:35
+167.81106766666664: Broker: Cloudlet #37 return received
+167.81106766666664: Broker: The number of finished Cloudlets is:36
+171.89640099999997: Broker: Cloudlet #34 return received
+171.89640099999997: Broker: The number of finished Cloudlets is:37
+172.19840099999996: Broker: Cloudlet #35 return received
+172.19840099999996: Broker: The number of finished Cloudlets is:38
+177.50160099999997: Broker: Cloudlet #39 return received
+177.50160099999997: Broker: The number of finished Cloudlets is:39
+182.13210099999998: Broker: Cloudlet #42 return received
+182.13210099999998: Broker: The number of finished Cloudlets is:40
+184.11970099999996: Broker: Cloudlet #43 return received
+184.11970099999996: Broker: The number of finished Cloudlets is:41
+192.07370099999997: Broker: Cloudlet #31 return received
+192.07370099999997: Broker: The number of finished Cloudlets is:42
+197.8610343333333: Broker: Cloudlet #44 return received
+197.8610343333333: Broker: The number of finished Cloudlets is:43
+202.9474343333333: Broker: Cloudlet #46 return received
+202.9474343333333: Broker: The number of finished Cloudlets is:44
+206.82213433333328: Broker: Cloudlet #40 return received
+206.82213433333328: Broker: The number of finished Cloudlets is:45
+207.73293433333328: Broker: Cloudlet #48 return received
+207.73293433333328: Broker: The number of finished Cloudlets is:46
+212.28543433333328: Broker: Cloudlet #45 return received
+212.28543433333328: Broker: The number of finished Cloudlets is:47
+219.31876766666662: Broker: Cloudlet #50 return received
+219.31876766666662: Broker: The number of finished Cloudlets is:48
+220.80860099999998: Broker: Cloudlet #53 return received
+220.80860099999998: Broker: The number of finished Cloudlets is:49
+221.94916766666663: Broker: Cloudlet #51 return received
+221.94916766666663: Broker: The number of finished Cloudlets is:50
+225.21216766666663: Broker: Cloudlet #47 return received
+225.21216766666663: Broker: The number of finished Cloudlets is:51
+226.382801: Broker: Cloudlet #57 return received
+226.382801: Broker: The number of finished Cloudlets is:52
+230.53256766666664: Broker: Cloudlet #59 return received
+230.53256766666664: Broker: The number of finished Cloudlets is:53
+244.94256766666663: Broker: Cloudlet #52 return received
+244.94256766666663: Broker: The number of finished Cloudlets is:54
+246.51106766666663: Broker: Cloudlet #54 return received
+246.51106766666663: Broker: The number of finished Cloudlets is:55
+257.0222676666666: Broker: Cloudlet #56 return received
+257.0222676666666: Broker: The number of finished Cloudlets is:56
+257.1430676666666: Broker: Cloudlet #60 return received
+257.1430676666666: Broker: The number of finished Cloudlets is:57
+262.70906766666656: Broker: Cloudlet #41 return received
+262.70906766666656: Broker: The number of finished Cloudlets is:58
+268.20606766666657: Broker: Cloudlet #49 return received
+268.20606766666657: Broker: The number of finished Cloudlets is:59
+274.2553009999999: Broker: Cloudlet #58 return received
+274.2553009999999: Broker: The number of finished Cloudlets is:60
+278.1551676666666: Broker: Cloudlet #64 return received
+278.1551676666666: Broker: The number of finished Cloudlets is:61
+281.58050099999997: Broker: Cloudlet #55 return received
+281.58050099999997: Broker: The number of finished Cloudlets is:62
+284.444101: Broker: Cloudlet #63 return received
+284.444101: Broker: The number of finished Cloudlets is:63
+284.9474343333333: Broker: Cloudlet #61 return received
+284.9474343333333: Broker: The number of finished Cloudlets is:64
+284.99243433333334: Broker: Cloudlet #65 return received
+284.99243433333334: Broker: The number of finished Cloudlets is:65
+289.8894343333333: Broker: Cloudlet #62 return received
+289.8894343333333: Broker: The number of finished Cloudlets is:66
+304.77703433333335: Broker: Cloudlet #70 return received
+304.77703433333335: Broker: The number of finished Cloudlets is:67
+309.71453433333335: Broker: Cloudlet #73 return received
+309.71453433333335: Broker: The number of finished Cloudlets is:68
+318.03013433333336: Broker: Cloudlet #68 return received
+318.03013433333336: Broker: The number of finished Cloudlets is:69
+322.7581343333334: Broker: Cloudlet #67 return received
+322.7581343333334: Broker: The number of finished Cloudlets is:70
+326.1202676666667: Broker: Cloudlet #76 return received
+326.1202676666667: Broker: The number of finished Cloudlets is:71
+329.58226766666667: Broker: Cloudlet #75 return received
+329.58226766666667: Broker: The number of finished Cloudlets is:72
+334.9152676666667: Broker: Cloudlet #66 return received
+334.9152676666667: Broker: The number of finished Cloudlets is:73
+340.27673433333337: Broker: Cloudlet #74 return received
+340.27673433333337: Broker: The number of finished Cloudlets is:74
+342.54123433333336: Broker: Cloudlet #77 return received
+342.54123433333336: Broker: The number of finished Cloudlets is:75
+343.7463676666667: Broker: Cloudlet #79 return received
+343.7463676666667: Broker: The number of finished Cloudlets is:76
+345.8171676666667: Broker: Cloudlet #81 return received
+345.8171676666667: Broker: The number of finished Cloudlets is:77
+347.302201: Broker: Cloudlet #69 return received
+347.302201: Broker: The number of finished Cloudlets is:78
+348.09153433333336: Broker: Cloudlet #71 return received
+348.09153433333336: Broker: The number of finished Cloudlets is:79
+352.66953433333333: Broker: Cloudlet #78 return received
+352.66953433333333: Broker: The number of finished Cloudlets is:80
+358.5430343333333: Broker: Cloudlet #83 return received
+358.5430343333333: Broker: The number of finished Cloudlets is:81
+365.30783433333335: Broker: Cloudlet #82 return received
+365.30783433333335: Broker: The number of finished Cloudlets is:82
+365.42983433333336: Broker: Cloudlet #72 return received
+365.42983433333336: Broker: The number of finished Cloudlets is:83
+375.5100343333333: Broker: Cloudlet #84 return received
+375.5100343333333: Broker: The number of finished Cloudlets is:84
+382.45283433333327: Broker: Cloudlet #87 return received
+382.45283433333327: Broker: The number of finished Cloudlets is:85
+384.361701: Broker: Cloudlet #86 return received
+384.361701: Broker: The number of finished Cloudlets is:86
+387.815701: Broker: Cloudlet #80 return received
+387.815701: Broker: The number of finished Cloudlets is:87
+387.894101: Broker: Cloudlet #91 return received
+387.894101: Broker: The number of finished Cloudlets is:88
+394.9073676666666: Broker: Cloudlet #95 return received
+394.9073676666666: Broker: The number of finished Cloudlets is:89
+395.41270099999997: Broker: Cloudlet #88 return received
+395.41270099999997: Broker: The number of finished Cloudlets is:90
+408.19630099999995: Broker: Cloudlet #96 return received
+408.19630099999995: Broker: The number of finished Cloudlets is:91
+409.50830099999996: Broker: Cloudlet #85 return received
+409.50830099999996: Broker: The number of finished Cloudlets is:92
+411.15346766666653: Broker: Cloudlet #89 return received
+411.15346766666653: Broker: The number of finished Cloudlets is:93
+416.199001: Broker: Cloudlet #92 return received
+416.199001: Broker: The number of finished Cloudlets is:94
+419.301001: Broker: Cloudlet #94 return received
+419.301001: Broker: The number of finished Cloudlets is:95
+424.817801: Broker: Cloudlet #98 return received
+424.817801: Broker: The number of finished Cloudlets is:96
+426.655801: Broker: Cloudlet #93 return received
+426.655801: Broker: The number of finished Cloudlets is:97
+432.127301: Broker: Cloudlet #100 return received
+432.127301: Broker: The number of finished Cloudlets is:98
+435.960301: Broker: Cloudlet #102 return received
+435.960301: Broker: The number of finished Cloudlets is:99
+437.609101: Broker: Cloudlet #101 return received
+437.609101: Broker: The number of finished Cloudlets is:100
+437.75010100000003: Broker: Cloudlet #90 return received
+437.75010100000003: Broker: The number of finished Cloudlets is:101
+438.018101: Broker: Cloudlet #97 return received
+438.018101: Broker: The number of finished Cloudlets is:102
+438.9927676666667: Broker: Cloudlet #104 return received
+438.9927676666667: Broker: The number of finished Cloudlets is:103
+449.5627676666667: Broker: Cloudlet #109 return received
+449.5627676666667: Broker: The number of finished Cloudlets is:104
+451.3951676666667: Broker: Cloudlet #107 return received
+451.3951676666667: Broker: The number of finished Cloudlets is:105
+452.01166766666665: Broker: Cloudlet #105 return received
+452.01166766666665: Broker: The number of finished Cloudlets is:106
+460.0004676666667: Broker: Cloudlet #112 return received
+460.0004676666667: Broker: The number of finished Cloudlets is:107
+464.7048676666667: Broker: Cloudlet #103 return received
+464.7048676666667: Broker: The number of finished Cloudlets is:108
+466.2797343333332: Broker: Cloudlet #114 return received
+466.2797343333332: Broker: The number of finished Cloudlets is:109
+467.5707343333332: Broker: Cloudlet #106 return received
+467.5707343333332: Broker: The number of finished Cloudlets is:110
+474.3850676666667: Broker: Cloudlet #99 return received
+474.3850676666667: Broker: The number of finished Cloudlets is:111
+477.1366009999998: Broker: Cloudlet #116 return received
+477.1366009999998: Broker: The number of finished Cloudlets is:112
+483.15710099999984: Broker: Cloudlet #113 return received
+483.15710099999984: Broker: The number of finished Cloudlets is:113
+484.08660099999986: Broker: Cloudlet #111 return received
+484.08660099999986: Broker: The number of finished Cloudlets is:114
+485.76960099999985: Broker: Cloudlet #117 return received
+485.76960099999985: Broker: The number of finished Cloudlets is:115
+489.65520099999986: Broker: Cloudlet #115 return received
+489.65520099999986: Broker: The number of finished Cloudlets is:116
+497.1818676666665: Broker: Cloudlet #110 return received
+497.1818676666665: Broker: The number of finished Cloudlets is:117
+500.7818676666665: Broker: Cloudlet #118 return received
+500.7818676666665: Broker: The number of finished Cloudlets is:118
+508.64546766666655: Broker: Cloudlet #123 return received
+508.64546766666655: Broker: The number of finished Cloudlets is:119
+509.77746766666655: Broker: Cloudlet #119 return received
+509.77746766666655: Broker: The number of finished Cloudlets is:120
+511.64146766666653: Broker: Cloudlet #121 return received
+511.64146766666653: Broker: The number of finished Cloudlets is:121
+514.2688009999998: Broker: Cloudlet #124 return received
+514.2688009999998: Broker: The number of finished Cloudlets is:122
+517.4932009999998: Broker: Cloudlet #126 return received
+517.4932009999998: Broker: The number of finished Cloudlets is:123
+522.8438676666665: Broker: Cloudlet #129 return received
+522.8438676666665: Broker: The number of finished Cloudlets is:124
+526.3408676666664: Broker: Cloudlet #108 return received
+526.3408676666664: Broker: The number of finished Cloudlets is:125
+528.5120676666664: Broker: Cloudlet #127 return received
+528.5120676666664: Broker: The number of finished Cloudlets is:126
+529.9336343333334: Broker: Cloudlet #120 return received
+529.9336343333334: Broker: The number of finished Cloudlets is:127
+533.4614009999998: Broker: Cloudlet #131 return received
+533.4614009999998: Broker: The number of finished Cloudlets is:128
+535.5054009999998: Broker: Cloudlet #125 return received
+535.5054009999998: Broker: The number of finished Cloudlets is:129
+535.7244343333334: Broker: Cloudlet #130 return received
+535.7244343333334: Broker: The number of finished Cloudlets is:130
+541.1754343333334: Broker: Cloudlet #122 return received
+541.1754343333334: Broker: The number of finished Cloudlets is:131
+544.5089343333334: Broker: Cloudlet #134 return received
+544.5089343333334: Broker: The number of finished Cloudlets is:132
+546.7241009999998: Broker: Cloudlet #128 return received
+546.7241009999998: Broker: The number of finished Cloudlets is:133
+554.0791009999998: Broker: Cloudlet #138 return received
+554.0791009999998: Broker: The number of finished Cloudlets is:134
+556.2438343333334: Broker: Cloudlet #137 return received
+556.2438343333334: Broker: The number of finished Cloudlets is:135
+558.9858343333334: Broker: Cloudlet #133 return received
+558.9858343333334: Broker: The number of finished Cloudlets is:136
+572.7099009999998: Broker: Cloudlet #132 return received
+572.7099009999998: Broker: The number of finished Cloudlets is:137
+579.6953343333334: Broker: Cloudlet #139 return received
+579.6953343333334: Broker: The number of finished Cloudlets is:138
+590.4453343333334: Broker: Cloudlet #143 return received
+590.4453343333334: Broker: The number of finished Cloudlets is:139
+591.5877343333334: Broker: Cloudlet #142 return received
+591.5877343333334: Broker: The number of finished Cloudlets is:140
+592.4577343333334: Broker: Cloudlet #135 return received
+592.4577343333334: Broker: The number of finished Cloudlets is:141
+594.1277343333334: Broker: Cloudlet #136 return received
+594.1277343333334: Broker: The number of finished Cloudlets is:142
+596.3472343333334: Broker: Cloudlet #140 return received
+596.3472343333334: Broker: The number of finished Cloudlets is:143
+606.397901: Broker: Cloudlet #149 return received
+606.397901: Broker: The number of finished Cloudlets is:144
+607.7714010000001: Broker: Cloudlet #150 return received
+607.7714010000001: Broker: The number of finished Cloudlets is:145
+615.5207343333334: Broker: Cloudlet #148 return received
+615.5207343333334: Broker: The number of finished Cloudlets is:146
+618.4477343333334: Broker: Cloudlet #152 return received
+618.4477343333334: Broker: The number of finished Cloudlets is:147
+623.4066009999998: Broker: Cloudlet #146 return received
+623.4066009999998: Broker: The number of finished Cloudlets is:148
+623.5674343333334: Broker: Cloudlet #145 return received
+623.5674343333334: Broker: The number of finished Cloudlets is:149
+630.8514343333334: Broker: Cloudlet #147 return received
+630.8514343333334: Broker: The number of finished Cloudlets is:150
+633.3084343333334: Broker: Cloudlet #154 return received
+633.3084343333334: Broker: The number of finished Cloudlets is:151
+642.9126009999998: Broker: Cloudlet #156 return received
+642.9126009999998: Broker: The number of finished Cloudlets is:152
+645.1317343333334: Broker: Cloudlet #155 return received
+645.1317343333334: Broker: The number of finished Cloudlets is:153
+646.6424010000001: Broker: Cloudlet #153 return received
+646.6424010000001: Broker: The number of finished Cloudlets is:154
+649.7804010000001: Broker: Cloudlet #160 return received
+649.7804010000001: Broker: The number of finished Cloudlets is:155
+650.614401: Broker: Cloudlet #141 return received
+650.614401: Broker: The number of finished Cloudlets is:156
+651.8889676666664: Broker: Cloudlet #158 return received
+651.8889676666664: Broker: The number of finished Cloudlets is:157
+660.5989676666665: Broker: Cloudlet #144 return received
+660.5989676666665: Broker: The number of finished Cloudlets is:158
+666.503401: Broker: Cloudlet #161 return received
+666.503401: Broker: The number of finished Cloudlets is:159
+666.6728343333332: Broker: Cloudlet #157 return received
+666.6728343333332: Broker: The number of finished Cloudlets is:160
+668.6395009999999: Broker: Cloudlet #151 return received
+668.6395009999999: Broker: The number of finished Cloudlets is:161
+677.0846676666667: Broker: Cloudlet #159 return received
+677.0846676666667: Broker: The number of finished Cloudlets is:162
+677.5514009999999: Broker: Cloudlet #162 return received
+677.5514009999999: Broker: The number of finished Cloudlets is:163
+681.6922676666668: Broker: Cloudlet #170 return received
+681.6922676666668: Broker: The number of finished Cloudlets is:164
+683.2016010000001: Broker: Cloudlet #168 return received
+683.2016010000001: Broker: The number of finished Cloudlets is:165
+693.6116010000001: Broker: Cloudlet #164 return received
+693.6116010000001: Broker: The number of finished Cloudlets is:166
+699.0446010000001: Broker: Cloudlet #165 return received
+699.0446010000001: Broker: The number of finished Cloudlets is:167
+699.6465343333332: Broker: Cloudlet #167 return received
+699.6465343333332: Broker: The number of finished Cloudlets is:168
+702.6430343333332: Broker: Cloudlet #173 return received
+702.6430343333332: Broker: The number of finished Cloudlets is:169
+710.7690343333331: Broker: Cloudlet #163 return received
+710.7690343333331: Broker: The number of finished Cloudlets is:170
+712.739101: Broker: Cloudlet #171 return received
+712.739101: Broker: The number of finished Cloudlets is:171
+721.8914343333332: Broker: Cloudlet #169 return received
+721.8914343333332: Broker: The number of finished Cloudlets is:172
+723.6994343333332: Broker: Cloudlet #174 return received
+723.6994343333332: Broker: The number of finished Cloudlets is:173
+726.9154343333332: Broker: Cloudlet #166 return received
+726.9154343333332: Broker: The number of finished Cloudlets is:174
+729.8141009999999: Broker: Cloudlet #172 return received
+729.8141009999999: Broker: The number of finished Cloudlets is:175
+732.1230676666668: Broker: Cloudlet #175 return received
+732.1230676666668: Broker: The number of finished Cloudlets is:176
+740.4620676666668: Broker: Cloudlet #180 return received
+740.4620676666668: Broker: The number of finished Cloudlets is:177
+748.3550676666669: Broker: Cloudlet #179 return received
+748.3550676666669: Broker: The number of finished Cloudlets is:178
+750.9240676666668: Broker: Cloudlet #176 return received
+750.9240676666668: Broker: The number of finished Cloudlets is:179
+752.5392676666668: Broker: Cloudlet #178 return received
+752.5392676666668: Broker: The number of finished Cloudlets is:180
+754.7602676666668: Broker: Cloudlet #177 return received
+754.7602676666668: Broker: The number of finished Cloudlets is:181
+761.7937676666668: Broker: Cloudlet #185 return received
+761.7937676666668: Broker: The number of finished Cloudlets is:182
+767.0120009999999: Broker: Cloudlet #183 return received
+767.0120009999999: Broker: The number of finished Cloudlets is:183
+769.9206676666668: Broker: Cloudlet #186 return received
+769.9206676666668: Broker: The number of finished Cloudlets is:184
+774.4586009999999: Broker: Cloudlet #190 return received
+774.4586009999999: Broker: The number of finished Cloudlets is:185
+776.654101: Broker: Cloudlet #191 return received
+776.654101: Broker: The number of finished Cloudlets is:186
+779.6888343333335: Broker: Cloudlet #182 return received
+779.6888343333335: Broker: The number of finished Cloudlets is:187
+785.6675010000001: Broker: Cloudlet #181 return received
+785.6675010000001: Broker: The number of finished Cloudlets is:188
+786.064901: Broker: Cloudlet #187 return received
+786.064901: Broker: The number of finished Cloudlets is:189
+793.663901: Broker: Cloudlet #188 return received
+793.663901: Broker: The number of finished Cloudlets is:190
+800.4012343333334: Broker: Cloudlet #194 return received
+800.4012343333334: Broker: The number of finished Cloudlets is:191
+803.7419343333336: Broker: Cloudlet #189 return received
+803.7419343333336: Broker: The number of finished Cloudlets is:192
+808.2897343333334: Broker: Cloudlet #193 return received
+808.2897343333334: Broker: The number of finished Cloudlets is:193
+811.6512343333334: Broker: Cloudlet #199 return received
+811.6512343333334: Broker: The number of finished Cloudlets is:194
+812.8342343333336: Broker: Cloudlet #192 return received
+812.8342343333336: Broker: The number of finished Cloudlets is:195
+813.0722343333337: Broker: Cloudlet #196 return received
+813.0722343333337: Broker: The number of finished Cloudlets is:196
+814.7069010000004: Broker: Cloudlet #195 return received
+814.7069010000004: Broker: The number of finished Cloudlets is:197
+839.8741010000002: Broker: Cloudlet #184 return received
+839.8741010000002: Broker: The number of finished Cloudlets is:198
+848.4571010000002: Broker: Cloudlet #197 return received
+848.4571010000002: Broker: The number of finished Cloudlets is:199
+862.5417676666668: Broker: Cloudlet #198 return received
+862.5417676666668: Broker: The number of finished Cloudlets is:200
+862.5417676666668: Broker: All Cloudlets executed. Finishing...
+862.5417676666668: Broker: Destroying Vm #0
+862.5417676666668: Broker: Destroying Vm #1
+862.5417676666668: Broker: Destroying Vm #2
+862.5417676666668: Broker: Destroying Vm #3
+862.5417676666668: Broker: Destroying Vm #4
+862.5417676666668: Broker: Destroying Vm #5
+862.5417676666668: Broker: Destroying Vm #6
+862.5417676666668: Broker: Destroying Vm #7
+862.5417676666668: Broker is shutting down...
+862.5419010000003: Simulation: No more future events
+862.5419010000003: CloudInformationService is shutting down...
+862.5419010000003: CloudInformationService: Notify all CloudSim entities for shutting down.
+862.5419010000003: Datacenter is shutting down...
+862.5419010000003: Broker is shutting down...
+Simulation completed.
+Simulation completed.
+FCFS: 200/200 tasks, makespan=862.542 s, cost=10.199648; output=/home/ben/Projects/kuliah/SOKA/cloudsim/results/fcfs-200
+❯ bash run-fcfs.sh 500 10 42 FCFS results/fcfs-500
+Initialising...
+Starting CloudSim version 7.0
+0.0: Datacenter is starting...
+0.0: Broker is starting...
+Entities started.
+0.0: Broker: Cloud Resource List received with 1 datacenter(s)
+0.0: Broker: Trying to Create Vm #0 in Datacenter
+0.0: Broker: Trying to Create Vm #1 in Datacenter
+0.0: Broker: Trying to Create Vm #2 in Datacenter
+0.0: Broker: Trying to Create Vm #3 in Datacenter
+0.0: Broker: Trying to Create Vm #4 in Datacenter
+0.0: Broker: Trying to Create Vm #5 in Datacenter
+0.0: Broker: Trying to Create Vm #6 in Datacenter
+0.0: Broker: Trying to Create Vm #7 in Datacenter
+0.0: Broker: Trying to Create Vm #8 in Datacenter
+0.0: Broker: Trying to Create Vm #9 in Datacenter
+0.0: Datacenter.guestAllocator: Vm #0 has been allocated to Host #0
+0.0: Datacenter.guestAllocator: Vm #1 has been allocated to Host #1
+0.0: Datacenter.guestAllocator: Vm #2 has been allocated to Host #2
+0.0: Datacenter.guestAllocator: Vm #3 has been allocated to Host #3
+0.0: Datacenter.guestAllocator: Vm #4 has been allocated to Host #0
+0.0: Datacenter.guestAllocator: Vm #5 has been allocated to Host #1
+0.0: Datacenter.guestAllocator: Vm #6 has been allocated to Host #2
+0.0: Datacenter.guestAllocator: Vm #7 has been allocated to Host #3
+0.0: Datacenter.guestAllocator: Vm #8 has been allocated to Host #0
+0.0: Datacenter.guestAllocator: Vm #9 has been allocated to Host #1
+1.0E-6: Broker: Vm #0 has been created in Datacenter #2, Host #0
+1.0E-6: Broker: Vm #1 has been created in Datacenter #2, Host #1
+1.0E-6: Broker: Vm #2 has been created in Datacenter #2, Host #2
+1.0E-6: Broker: Vm #3 has been created in Datacenter #2, Host #3
+1.0E-6: Broker: Vm #4 has been created in Datacenter #2, Host #0
+1.0E-6: Broker: Vm #5 has been created in Datacenter #2, Host #1
+1.0E-6: Broker: Vm #6 has been created in Datacenter #2, Host #2
+1.0E-6: Broker: Vm #7 has been created in Datacenter #2, Host #3
+1.0E-6: Broker: Vm #8 has been created in Datacenter #2, Host #0
+1.0E-6: Broker: Vm #9 has been created in Datacenter #2, Host #1
+1.0E-6: Broker: Sending Cloudlet #0 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #1 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #2 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #3 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #4 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #5 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #6 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #7 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #8 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #9 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #10 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #11 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #12 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #13 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #14 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #15 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #16 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #17 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #18 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #19 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #20 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #21 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #22 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #23 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #24 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #25 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #26 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #27 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #28 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #29 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #30 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #31 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #32 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #33 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #34 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #35 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #36 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #37 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #38 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #39 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #40 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #41 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #42 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #43 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #44 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #45 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #46 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #47 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #48 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #49 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #50 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #51 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #52 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #53 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #54 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #55 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #56 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #57 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #58 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #59 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #60 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #61 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #62 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #63 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #64 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #65 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #66 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #67 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #68 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #69 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #70 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #71 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #72 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #73 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #74 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #75 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #76 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #77 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #78 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #79 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #80 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #81 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #82 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #83 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #84 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #85 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #86 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #87 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #88 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #89 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #90 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #91 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #92 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #93 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #94 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #95 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #96 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #97 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #98 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #99 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #100 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #101 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #102 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #103 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #104 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #105 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #106 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #107 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #108 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #109 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #110 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #111 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #112 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #113 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #114 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #115 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #116 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #117 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #118 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #119 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #120 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #121 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #122 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #123 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #124 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #125 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #126 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #127 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #128 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #129 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #130 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #131 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #132 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #133 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #134 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #135 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #136 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #137 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #138 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #139 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #140 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #141 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #142 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #143 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #144 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #145 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #146 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #147 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #148 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #149 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #150 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #151 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #152 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #153 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #154 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #155 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #156 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #157 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #158 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #159 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #160 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #161 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #162 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #163 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #164 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #165 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #166 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #167 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #168 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #169 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #170 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #171 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #172 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #173 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #174 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #175 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #176 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #177 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #178 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #179 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #180 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #181 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #182 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #183 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #184 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #185 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #186 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #187 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #188 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #189 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #190 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #191 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #192 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #193 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #194 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #195 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #196 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #197 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #198 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #199 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #200 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #201 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #202 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #203 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #204 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #205 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #206 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #207 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #208 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #209 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #210 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #211 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #212 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #213 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #214 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #215 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #216 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #217 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #218 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #219 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #220 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #221 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #222 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #223 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #224 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #225 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #226 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #227 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #228 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #229 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #230 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #231 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #232 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #233 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #234 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #235 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #236 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #237 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #238 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #239 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #240 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #241 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #242 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #243 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #244 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #245 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #246 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #247 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #248 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #249 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #250 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #251 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #252 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #253 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #254 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #255 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #256 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #257 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #258 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #259 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #260 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #261 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #262 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #263 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #264 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #265 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #266 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #267 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #268 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #269 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #270 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #271 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #272 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #273 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #274 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #275 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #276 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #277 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #278 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #279 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #280 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #281 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #282 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #283 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #284 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #285 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #286 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #287 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #288 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #289 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #290 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #291 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #292 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #293 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #294 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #295 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #296 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #297 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #298 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #299 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #300 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #301 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #302 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #303 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #304 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #305 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #306 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #307 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #308 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #309 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #310 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #311 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #312 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #313 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #314 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #315 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #316 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #317 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #318 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #319 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #320 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #321 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #322 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #323 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #324 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #325 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #326 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #327 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #328 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #329 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #330 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #331 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #332 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #333 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #334 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #335 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #336 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #337 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #338 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #339 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #340 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #341 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #342 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #343 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #344 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #345 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #346 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #347 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #348 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #349 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #350 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #351 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #352 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #353 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #354 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #355 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #356 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #357 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #358 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #359 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #360 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #361 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #362 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #363 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #364 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #365 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #366 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #367 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #368 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #369 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #370 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #371 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #372 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #373 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #374 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #375 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #376 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #377 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #378 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #379 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #380 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #381 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #382 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #383 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #384 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #385 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #386 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #387 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #388 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #389 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #390 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #391 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #392 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #393 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #394 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #395 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #396 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #397 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #398 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #399 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #400 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #401 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #402 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #403 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #404 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #405 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #406 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #407 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #408 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #409 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #410 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #411 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #412 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #413 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #414 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #415 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #416 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #417 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #418 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #419 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #420 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #421 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #422 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #423 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #424 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #425 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #426 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #427 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #428 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #429 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #430 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #431 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #432 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #433 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #434 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #435 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #436 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #437 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #438 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #439 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #440 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #441 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #442 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #443 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #444 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #445 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #446 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #447 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #448 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #449 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #450 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #451 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #452 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #453 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #454 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #455 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #456 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #457 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #458 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #459 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #460 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #461 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #462 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #463 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #464 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #465 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #466 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #467 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #468 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #469 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #470 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #471 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #472 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #473 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #474 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #475 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #476 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #477 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #478 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #479 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #480 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #481 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #482 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #483 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #484 to Vm #3
+1.0E-6: Broker: Sending Cloudlet #485 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #486 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #487 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #488 to Vm #9
+1.0E-6: Broker: Sending Cloudlet #489 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #490 to Vm #4
+1.0E-6: Broker: Sending Cloudlet #491 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #492 to Vm #8
+1.0E-6: Broker: Sending Cloudlet #493 to Vm #1
+1.0E-6: Broker: Sending Cloudlet #494 to Vm #2
+1.0E-6: Broker: Sending Cloudlet #495 to Vm #5
+1.0E-6: Broker: Sending Cloudlet #496 to Vm #0
+1.0E-6: Broker: Sending Cloudlet #497 to Vm #6
+1.0E-6: Broker: Sending Cloudlet #498 to Vm #7
+1.0E-6: Broker: Sending Cloudlet #499 to Vm #3
+6.365601: Broker: Cloudlet #3 return received
+6.365601: Broker: The number of finished Cloudlets is:1
+7.704934333333333: Broker: Cloudlet #5 return received
+7.704934333333333: Broker: The number of finished Cloudlets is:2
+17.446834333333335: Broker: Cloudlet #2 return received
+17.446834333333335: Broker: The number of finished Cloudlets is:3
+23.769834333333336: Broker: Cloudlet #0 return received
+23.769834333333336: Broker: The number of finished Cloudlets is:4
+30.031334333333334: Broker: Cloudlet #6 return received
+30.031334333333334: Broker: The number of finished Cloudlets is:5
+31.384934333333334: Broker: Cloudlet #10 return received
+31.384934333333334: Broker: The number of finished Cloudlets is:6
+32.99793433333333: Broker: Cloudlet #12 return received
+32.99793433333333: Broker: The number of finished Cloudlets is:7
+33.349034333333336: Broker: Cloudlet #8 return received
+33.349034333333336: Broker: The number of finished Cloudlets is:8
+33.69503433333333: Broker: Cloudlet #7 return received
+33.69503433333333: Broker: The number of finished Cloudlets is:9
+45.60703433333333: Broker: Cloudlet #9 return received
+45.60703433333333: Broker: The number of finished Cloudlets is:10
+46.47603433333333: Broker: Cloudlet #4 return received
+46.47603433333333: Broker: The number of finished Cloudlets is:11
+46.733000999999994: Broker: Cloudlet #15 return received
+46.733000999999994: Broker: The number of finished Cloudlets is:12
+48.57233433333333: Broker: Cloudlet #18 return received
+48.57233433333333: Broker: The number of finished Cloudlets is:13
+51.27793433333333: Broker: Cloudlet #21 return received
+51.27793433333333: Broker: The number of finished Cloudlets is:14
+53.129934333333324: Broker: Cloudlet #14 return received
+53.129934333333324: Broker: The number of finished Cloudlets is:15
+58.49336766666666: Broker: Cloudlet #1 return received
+58.49336766666666: Broker: The number of finished Cloudlets is:16
+63.03836766666666: Broker: Cloudlet #17 return received
+63.03836766666666: Broker: The number of finished Cloudlets is:17
+67.70146766666664: Broker: Cloudlet #16 return received
+67.70146766666664: Broker: The number of finished Cloudlets is:18
+69.86066766666664: Broker: Cloudlet #22 return received
+69.86066766666664: Broker: The number of finished Cloudlets is:19
+71.10800099999997: Broker: Cloudlet #11 return received
+71.10800099999997: Broker: The number of finished Cloudlets is:20
+75.46560099999998: Broker: Cloudlet #23 return received
+75.46560099999998: Broker: The number of finished Cloudlets is:21
+80.36360099999997: Broker: Cloudlet #19 return received
+80.36360099999997: Broker: The number of finished Cloudlets is:22
+99.54200099999997: Broker: Cloudlet #28 return received
+99.54200099999997: Broker: The number of finished Cloudlets is:23
+99.55850099999996: Broker: Cloudlet #24 return received
+99.55850099999996: Broker: The number of finished Cloudlets is:24
+102.28650099999996: Broker: Cloudlet #30 return received
+102.28650099999996: Broker: The number of finished Cloudlets is:25
+103.99516766666663: Broker: Cloudlet #25 return received
+103.99516766666663: Broker: The number of finished Cloudlets is:26
+107.44966766666663: Broker: Cloudlet #27 return received
+107.44966766666663: Broker: The number of finished Cloudlets is:27
+118.39266766666663: Broker: Cloudlet #13 return received
+118.39266766666663: Broker: The number of finished Cloudlets is:28
+123.26720099999997: Broker: Cloudlet #36 return received
+123.26720099999997: Broker: The number of finished Cloudlets is:29
+129.68266766666662: Broker: Cloudlet #33 return received
+129.68266766666662: Broker: The number of finished Cloudlets is:30
+129.7260343333333: Broker: Cloudlet #29 return received
+129.7260343333333: Broker: The number of finished Cloudlets is:31
+130.90606766666662: Broker: Cloudlet #20 return received
+130.90606766666662: Broker: The number of finished Cloudlets is:32
+131.25903433333332: Broker: Cloudlet #34 return received
+131.25903433333332: Broker: The number of finished Cloudlets is:33
+132.38503433333332: Broker: Cloudlet #26 return received
+132.38503433333332: Broker: The number of finished Cloudlets is:34
+134.5712676666666: Broker: Cloudlet #32 return received
+134.5712676666666: Broker: The number of finished Cloudlets is:35
+137.0752676666666: Broker: Cloudlet #31 return received
+137.0752676666666: Broker: The number of finished Cloudlets is:36
+140.66976766666662: Broker: Cloudlet #38 return received
+140.66976766666662: Broker: The number of finished Cloudlets is:37
+144.4651343333333: Broker: Cloudlet #42 return received
+144.4651343333333: Broker: The number of finished Cloudlets is:38
+150.14976766666663: Broker: Cloudlet #44 return received
+150.14976766666663: Broker: The number of finished Cloudlets is:39
+163.99926766666664: Broker: Cloudlet #39 return received
+163.99926766666664: Broker: The number of finished Cloudlets is:40
+168.56460099999998: Broker: Cloudlet #35 return received
+168.56460099999998: Broker: The number of finished Cloudlets is:41
+172.47680099999997: Broker: Cloudlet #46 return received
+172.47680099999997: Broker: The number of finished Cloudlets is:42
+173.15610099999998: Broker: Cloudlet #43 return received
+173.15610099999998: Broker: The number of finished Cloudlets is:43
+173.76306766666664: Broker: Cloudlet #48 return received
+173.76306766666664: Broker: The number of finished Cloudlets is:44
+178.92920099999998: Broker: Cloudlet #47 return received
+178.92920099999998: Broker: The number of finished Cloudlets is:45
+185.46546766666665: Broker: Cloudlet #40 return received
+185.46546766666665: Broker: The number of finished Cloudlets is:46
+186.83876766666666: Broker: Cloudlet #53 return received
+186.83876766666666: Broker: The number of finished Cloudlets is:47
+189.55976766666666: Broker: Cloudlet #37 return received
+189.55976766666666: Broker: The number of finished Cloudlets is:48
+190.02206766666663: Broker: Cloudlet #50 return received
+190.02206766666663: Broker: The number of finished Cloudlets is:49
+190.5247343333333: Broker: Cloudlet #45 return received
+190.5247343333333: Broker: The number of finished Cloudlets is:50
+196.229101: Broker: Cloudlet #51 return received
+196.229101: Broker: The number of finished Cloudlets is:51
+197.441101: Broker: Cloudlet #59 return received
+197.441101: Broker: The number of finished Cloudlets is:52
+200.644101: Broker: Cloudlet #57 return received
+200.644101: Broker: The number of finished Cloudlets is:53
+202.06560100000002: Broker: Cloudlet #49 return received
+202.06560100000002: Broker: The number of finished Cloudlets is:54
+206.3097343333333: Broker: Cloudlet #54 return received
+206.3097343333333: Broker: The number of finished Cloudlets is:55
+223.05240100000003: Broker: Cloudlet #56 return received
+223.05240100000003: Broker: The number of finished Cloudlets is:56
+227.32200100000003: Broker: Cloudlet #64 return received
+227.32200100000003: Broker: The number of finished Cloudlets is:57
+229.27213433333327: Broker: Cloudlet #41 return received
+229.27213433333327: Broker: The number of finished Cloudlets is:58
+229.49213433333327: Broker: Cloudlet #60 return received
+229.49213433333327: Broker: The number of finished Cloudlets is:59
+230.33613433333326: Broker: Cloudlet #52 return received
+230.33613433333326: Broker: The number of finished Cloudlets is:60
+231.96570100000002: Broker: Cloudlet #65 return received
+231.96570100000002: Broker: The number of finished Cloudlets is:61
+236.34270100000003: Broker: Cloudlet #63 return received
+236.34270100000003: Broker: The number of finished Cloudlets is:62
+237.44603433333336: Broker: Cloudlet #61 return received
+237.44603433333336: Broker: The number of finished Cloudlets is:63
+247.72736766666668: Broker: Cloudlet #55 return received
+247.72736766666668: Broker: The number of finished Cloudlets is:64
+252.29856766666668: Broker: Cloudlet #70 return received
+252.29856766666668: Broker: The number of finished Cloudlets is:65
+254.00576766666669: Broker: Cloudlet #66 return received
+254.00576766666669: Broker: The number of finished Cloudlets is:66
+255.413101: Broker: Cloudlet #58 return received
+255.413101: Broker: The number of finished Cloudlets is:67
+268.8964676666666: Broker: Cloudlet #76 return received
+268.8964676666666: Broker: The number of finished Cloudlets is:68
+269.899901: Broker: Cloudlet #75 return received
+269.899901: Broker: The number of finished Cloudlets is:69
+274.16073433333327: Broker: Cloudlet #73 return received
+274.16073433333327: Broker: The number of finished Cloudlets is:70
+279.3357343333333: Broker: Cloudlet #68 return received
+279.3357343333333: Broker: The number of finished Cloudlets is:71
+283.7007343333333: Broker: Cloudlet #71 return received
+283.7007343333333: Broker: The number of finished Cloudlets is:72
+287.4007343333333: Broker: Cloudlet #62 return received
+287.4007343333333: Broker: The number of finished Cloudlets is:73
+287.7983343333333: Broker: Cloudlet #74 return received
+287.7983343333333: Broker: The number of finished Cloudlets is:74
+290.62633433333326: Broker: Cloudlet #81 return received
+290.62633433333326: Broker: The number of finished Cloudlets is:75
+291.0710009999999: Broker: Cloudlet #72 return received
+291.0710009999999: Broker: The number of finished Cloudlets is:76
+293.0463343333332: Broker: Cloudlet #79 return received
+293.0463343333332: Broker: The number of finished Cloudlets is:77
+295.27433433333323: Broker: Cloudlet #77 return received
+295.27433433333323: Broker: The number of finished Cloudlets is:78
+296.44913433333323: Broker: Cloudlet #78 return received
+296.44913433333323: Broker: The number of finished Cloudlets is:79
+299.63593433333324: Broker: Cloudlet #83 return received
+299.63593433333324: Broker: The number of finished Cloudlets is:80
+305.7859343333332: Broker: Cloudlet #80 return received
+305.7859343333332: Broker: The number of finished Cloudlets is:81
+325.9451343333332: Broker: Cloudlet #88 return received
+325.9451343333332: Broker: The number of finished Cloudlets is:82
+326.27813433333324: Broker: Cloudlet #67 return received
+326.27813433333324: Broker: The number of finished Cloudlets is:83
+327.7426343333332: Broker: Cloudlet #84 return received
+327.7426343333332: Broker: The number of finished Cloudlets is:84
+328.9186343333332: Broker: Cloudlet #69 return received
+328.9186343333332: Broker: The number of finished Cloudlets is:85
+329.31663433333324: Broker: Cloudlet #86 return received
+329.31663433333324: Broker: The number of finished Cloudlets is:86
+332.93463433333324: Broker: Cloudlet #82 return received
+332.93463433333324: Broker: The number of finished Cloudlets is:87
+336.3126343333332: Broker: Cloudlet #89 return received
+336.3126343333332: Broker: The number of finished Cloudlets is:88
+338.3294343333332: Broker: Cloudlet #91 return received
+338.3294343333332: Broker: The number of finished Cloudlets is:89
+341.0054343333332: Broker: Cloudlet #95 return received
+341.0054343333332: Broker: The number of finished Cloudlets is:90
+341.9464343333332: Broker: Cloudlet #90 return received
+341.9464343333332: Broker: The number of finished Cloudlets is:91
+344.9131009999998: Broker: Cloudlet #87 return received
+344.9131009999998: Broker: The number of finished Cloudlets is:92
+353.2771009999998: Broker: Cloudlet #85 return received
+353.2771009999998: Broker: The number of finished Cloudlets is:93
+354.9507009999998: Broker: Cloudlet #98 return received
+354.9507009999998: Broker: The number of finished Cloudlets is:94
+359.4632009999998: Broker: Cloudlet #93 return received
+359.4632009999998: Broker: The number of finished Cloudlets is:95
+360.4042009999998: Broker: Cloudlet #94 return received
+360.4042009999998: Broker: The number of finished Cloudlets is:96
+362.9202009999998: Broker: Cloudlet #100 return received
+362.9202009999998: Broker: The number of finished Cloudlets is:97
+364.3835343333331: Broker: Cloudlet #102 return received
+364.3835343333331: Broker: The number of finished Cloudlets is:98
+366.1575343333331: Broker: Cloudlet #96 return received
+366.1575343333331: Broker: The number of finished Cloudlets is:99
+368.7160343333331: Broker: Cloudlet #104 return received
+368.7160343333331: Broker: The number of finished Cloudlets is:100
+370.39683433333306: Broker: Cloudlet #97 return received
+370.39683433333306: Broker: The number of finished Cloudlets is:101
+378.7253343333331: Broker: Cloudlet #106 return received
+378.7253343333331: Broker: The number of finished Cloudlets is:102
+380.2608343333331: Broker: Cloudlet #109 return received
+380.2608343333331: Broker: The number of finished Cloudlets is:103
+380.5968343333331: Broker: Cloudlet #101 return received
+380.5968343333331: Broker: The number of finished Cloudlets is:104
+387.3608343333331: Broker: Cloudlet #107 return received
+387.3608343333331: Broker: The number of finished Cloudlets is:105
+391.0178343333331: Broker: Cloudlet #112 return received
+391.0178343333331: Broker: The number of finished Cloudlets is:106
+394.8378343333331: Broker: Cloudlet #103 return received
+394.8378343333331: Broker: The number of finished Cloudlets is:107
+397.8265009999998: Broker: Cloudlet #114 return received
+397.8265009999998: Broker: The number of finished Cloudlets is:108
+400.1725009999998: Broker: Cloudlet #105 return received
+400.1725009999998: Broker: The number of finished Cloudlets is:109
+405.3101009999998: Broker: Cloudlet #110 return received
+405.3101009999998: Broker: The number of finished Cloudlets is:110
+405.6949009999998: Broker: Cloudlet #116 return received
+405.6949009999998: Broker: The number of finished Cloudlets is:111
+405.88223433333314: Broker: Cloudlet #99 return received
+405.88223433333314: Broker: The number of finished Cloudlets is:112
+409.9589009999998: Broker: Cloudlet #117 return received
+409.9589009999998: Broker: The number of finished Cloudlets is:113
+410.6439009999998: Broker: Cloudlet #92 return received
+410.6439009999998: Broker: The number of finished Cloudlets is:114
+413.2489009999998: Broker: Cloudlet #111 return received
+413.2489009999998: Broker: The number of finished Cloudlets is:115
+422.1235676666665: Broker: Cloudlet #113 return received
+422.1235676666665: Broker: The number of finished Cloudlets is:116
+422.20556766666647: Broker: Cloudlet #115 return received
+422.20556766666647: Broker: The number of finished Cloudlets is:117
+426.06406766666646: Broker: Cloudlet #124 return received
+426.06406766666646: Broker: The number of finished Cloudlets is:118
+433.26556766666647: Broker: Cloudlet #126 return received
+433.26556766666647: Broker: The number of finished Cloudlets is:119
+437.9511676666665: Broker: Cloudlet #119 return received
+437.9511676666665: Broker: The number of finished Cloudlets is:120
+439.7681676666665: Broker: Cloudlet #118 return received
+439.7681676666665: Broker: The number of finished Cloudlets is:121
+442.6221676666665: Broker: Cloudlet #121 return received
+442.6221676666665: Broker: The number of finished Cloudlets is:122
+443.0961676666665: Broker: Cloudlet #129 return received
+443.0961676666665: Broker: The number of finished Cloudlets is:123
+443.11616766666646: Broker: Cloudlet #120 return received
+443.11616766666646: Broker: The number of finished Cloudlets is:124
+446.89616766666643: Broker: Cloudlet #122 return received
+446.89616766666643: Broker: The number of finished Cloudlets is:125
+449.48216766666644: Broker: Cloudlet #127 return received
+449.48216766666644: Broker: The number of finished Cloudlets is:126
+453.2401676666664: Broker: Cloudlet #131 return received
+453.2401676666664: Broker: The number of finished Cloudlets is:127
+454.7481676666664: Broker: Cloudlet #108 return received
+454.7481676666664: Broker: The number of finished Cloudlets is:128
+456.84750099999974: Broker: Cloudlet #125 return received
+456.84750099999974: Broker: The number of finished Cloudlets is:129
+458.11950099999973: Broker: Cloudlet #123 return received
+458.11950099999973: Broker: The number of finished Cloudlets is:130
+461.64390099999974: Broker: Cloudlet #132 return received
+461.64390099999974: Broker: The number of finished Cloudlets is:131
+465.4499009999997: Broker: Cloudlet #138 return received
+465.4499009999997: Broker: The number of finished Cloudlets is:132
+466.3299009999997: Broker: Cloudlet #134 return received
+466.3299009999997: Broker: The number of finished Cloudlets is:133
+468.34840099999974: Broker: Cloudlet #128 return received
+468.34840099999974: Broker: The number of finished Cloudlets is:134
+473.59000099999975: Broker: Cloudlet #133 return received
+473.59000099999975: Broker: The number of finished Cloudlets is:135
+485.34700099999975: Broker: Cloudlet #130 return received
+485.34700099999975: Broker: The number of finished Cloudlets is:136
+493.72950099999974: Broker: Cloudlet #135 return received
+493.72950099999974: Broker: The number of finished Cloudlets is:137
+501.34270099999975: Broker: Cloudlet #140 return received
+501.34270099999975: Broker: The number of finished Cloudlets is:138
+506.04670099999976: Broker: Cloudlet #137 return received
+506.04670099999976: Broker: The number of finished Cloudlets is:139
+507.67270099999973: Broker: Cloudlet #143 return received
+507.67270099999973: Broker: The number of finished Cloudlets is:140
+508.7459009999997: Broker: Cloudlet #144 return received
+508.7459009999997: Broker: The number of finished Cloudlets is:141
+511.8625676666664: Broker: Cloudlet #136 return received
+511.8625676666664: Broker: The number of finished Cloudlets is:142
+516.8755676666664: Broker: Cloudlet #149 return received
+516.8755676666664: Broker: The number of finished Cloudlets is:143
+517.8851676666663: Broker: Cloudlet #150 return received
+517.8851676666663: Broker: The number of finished Cloudlets is:144
+525.2365009999996: Broker: Cloudlet #142 return received
+525.2365009999996: Broker: The number of finished Cloudlets is:145
+527.5520009999997: Broker: Cloudlet #152 return received
+527.5520009999997: Broker: The number of finished Cloudlets is:146
+528.4920009999997: Broker: Cloudlet #139 return received
+528.4920009999997: Broker: The number of finished Cloudlets is:147
+529.8066676666664: Broker: Cloudlet #141 return received
+529.8066676666664: Broker: The number of finished Cloudlets is:148
+534.9311676666664: Broker: Cloudlet #146 return received
+534.9311676666664: Broker: The number of finished Cloudlets is:149
+536.5583676666664: Broker: Cloudlet #153 return received
+536.5583676666664: Broker: The number of finished Cloudlets is:150
+540.6063676666664: Broker: Cloudlet #147 return received
+540.6063676666664: Broker: The number of finished Cloudlets is:151
+540.6413676666664: Broker: Cloudlet #148 return received
+540.6413676666664: Broker: The number of finished Cloudlets is:152
+545.0507009999997: Broker: Cloudlet #154 return received
+545.0507009999997: Broker: The number of finished Cloudlets is:153
+545.2551009999996: Broker: Cloudlet #160 return received
+545.2551009999996: Broker: The number of finished Cloudlets is:154
+553.5121009999996: Broker: Cloudlet #158 return received
+553.5121009999996: Broker: The number of finished Cloudlets is:155
+554.7081009999996: Broker: Cloudlet #155 return received
+554.7081009999996: Broker: The number of finished Cloudlets is:156
+563.8961009999996: Broker: Cloudlet #159 return received
+563.8961009999996: Broker: The number of finished Cloudlets is:157
+567.1821009999995: Broker: Cloudlet #156 return received
+567.1821009999995: Broker: The number of finished Cloudlets is:158
+569.3169009999996: Broker: Cloudlet #163 return received
+569.3169009999996: Broker: The number of finished Cloudlets is:159
+570.4329009999996: Broker: Cloudlet #161 return received
+570.4329009999996: Broker: The number of finished Cloudlets is:160
+573.0919009999996: Broker: Cloudlet #145 return received
+573.0919009999996: Broker: The number of finished Cloudlets is:161
+573.9309009999996: Broker: Cloudlet #165 return received
+573.9309009999996: Broker: The number of finished Cloudlets is:162
+574.1042343333329: Broker: Cloudlet #151 return received
+574.1042343333329: Broker: The number of finished Cloudlets is:163
+578.0542343333329: Broker: Cloudlet #168 return received
+578.0542343333329: Broker: The number of finished Cloudlets is:164
+583.4442343333329: Broker: Cloudlet #170 return received
+583.4442343333329: Broker: The number of finished Cloudlets is:165
+585.2794343333329: Broker: Cloudlet #173 return received
+585.2794343333329: Broker: The number of finished Cloudlets is:166
+589.5087676666662: Broker: Cloudlet #157 return received
+589.5087676666662: Broker: The number of finished Cloudlets is:167
+591.335434333333: Broker: Cloudlet #162 return received
+591.335434333333: Broker: The number of finished Cloudlets is:168
+595.234934333333: Broker: Cloudlet #164 return received
+595.234934333333: Broker: The number of finished Cloudlets is:169
+600.143334333333: Broker: Cloudlet #166 return received
+600.143334333333: Broker: The number of finished Cloudlets is:170
+608.098334333333: Broker: Cloudlet #174 return received
+608.098334333333: Broker: The number of finished Cloudlets is:171
+612.739834333333: Broker: Cloudlet #171 return received
+612.739834333333: Broker: The number of finished Cloudlets is:172
+617.7562343333329: Broker: Cloudlet #175 return received
+617.7562343333329: Broker: The number of finished Cloudlets is:173
+620.6629009999996: Broker: Cloudlet #177 return received
+620.6629009999996: Broker: The number of finished Cloudlets is:174
+620.7169009999996: Broker: Cloudlet #172 return received
+620.7169009999996: Broker: The number of finished Cloudlets is:175
+621.3145009999996: Broker: Cloudlet #179 return received
+621.3145009999996: Broker: The number of finished Cloudlets is:176
+624.8605009999997: Broker: Cloudlet #180 return received
+624.8605009999997: Broker: The number of finished Cloudlets is:177
+632.0657009999996: Broker: Cloudlet #185 return received
+632.0657009999996: Broker: The number of finished Cloudlets is:178
+644.9852009999996: Broker: Cloudlet #178 return received
+644.9852009999996: Broker: The number of finished Cloudlets is:179
+647.6812009999996: Broker: Cloudlet #182 return received
+647.6812009999996: Broker: The number of finished Cloudlets is:180
+649.6162009999996: Broker: Cloudlet #167 return received
+649.6162009999996: Broker: The number of finished Cloudlets is:181
+653.8835343333329: Broker: Cloudlet #176 return received
+653.8835343333329: Broker: The number of finished Cloudlets is:182
+656.8040343333329: Broker: Cloudlet #181 return received
+656.8040343333329: Broker: The number of finished Cloudlets is:183
+660.0460343333328: Broker: Cloudlet #169 return received
+660.0460343333328: Broker: The number of finished Cloudlets is:184
+662.8540343333328: Broker: Cloudlet #186 return received
+662.8540343333328: Broker: The number of finished Cloudlets is:185
+662.8640353333328: Broker: Cloudlet #191 return received
+662.8640353333328: Broker: The number of finished Cloudlets is:186
+664.4370353333328: Broker: Cloudlet #188 return received
+664.4370353333328: Broker: The number of finished Cloudlets is:187
+665.5914353333328: Broker: Cloudlet #187 return received
+665.5914353333328: Broker: The number of finished Cloudlets is:188
+668.2324353333328: Broker: Cloudlet #190 return received
+668.2324353333328: Broker: The number of finished Cloudlets is:189
+678.8111019999994: Broker: Cloudlet #183 return received
+678.8111019999994: Broker: The number of finished Cloudlets is:190
+681.2399019999995: Broker: Cloudlet #189 return received
+681.2399019999995: Broker: The number of finished Cloudlets is:191
+686.9919019999994: Broker: Cloudlet #184 return received
+686.9919019999994: Broker: The number of finished Cloudlets is:192
+687.5087019999994: Broker: Cloudlet #197 return received
+687.5087019999994: Broker: The number of finished Cloudlets is:193
+687.9475019999994: Broker: Cloudlet #200 return received
+687.9475019999994: Broker: The number of finished Cloudlets is:194
+689.3568353333327: Broker: Cloudlet #199 return received
+689.3568353333327: Broker: The number of finished Cloudlets is:195
+691.9035019999993: Broker: Cloudlet #195 return received
+691.9035019999993: Broker: The number of finished Cloudlets is:196
+692.3243019999993: Broker: Cloudlet #202 return received
+692.3243019999993: Broker: The number of finished Cloudlets is:197
+693.9223019999993: Broker: Cloudlet #194 return received
+693.9223019999993: Broker: The number of finished Cloudlets is:198
+694.3516353333326: Broker: Cloudlet #201 return received
+694.3516353333326: Broker: The number of finished Cloudlets is:199
+698.1961353333327: Broker: Cloudlet #196 return received
+698.1961353333327: Broker: The number of finished Cloudlets is:200
+704.7736353333327: Broker: Cloudlet #192 return received
+704.7736353333327: Broker: The number of finished Cloudlets is:201
+711.4216353333327: Broker: Cloudlet #205 return received
+711.4216353333327: Broker: The number of finished Cloudlets is:202
+712.1643019999993: Broker: Cloudlet #204 return received
+712.1643019999993: Broker: The number of finished Cloudlets is:203
+716.6731019999993: Broker: Cloudlet #206 return received
+716.6731019999993: Broker: The number of finished Cloudlets is:204
+722.6019019999993: Broker: Cloudlet #213 return received
+722.6019019999993: Broker: The number of finished Cloudlets is:205
+722.9339019999993: Broker: Cloudlet #203 return received
+722.9339019999993: Broker: The number of finished Cloudlets is:206
+723.3179019999993: Broker: Cloudlet #193 return received
+723.3179019999993: Broker: The number of finished Cloudlets is:207
+726.5412353333327: Broker: Cloudlet #211 return received
+726.5412353333327: Broker: The number of finished Cloudlets is:208
+730.8697353333326: Broker: Cloudlet #209 return received
+730.8697353333326: Broker: The number of finished Cloudlets is:209
+740.3133353333326: Broker: Cloudlet #215 return received
+740.3133353333326: Broker: The number of finished Cloudlets is:210
+740.7773353333326: Broker: Cloudlet #210 return received
+740.7773353333326: Broker: The number of finished Cloudlets is:211
+743.5423353333326: Broker: Cloudlet #216 return received
+743.5423353333326: Broker: The number of finished Cloudlets is:212
+744.0463353333326: Broker: Cloudlet #208 return received
+744.0463353333326: Broker: The number of finished Cloudlets is:213
+748.0827353333326: Broker: Cloudlet #214 return received
+748.0827353333326: Broker: The number of finished Cloudlets is:214
+754.0635353333327: Broker: Cloudlet #219 return received
+754.0635353333327: Broker: The number of finished Cloudlets is:215
+754.7015353333327: Broker: Cloudlet #217 return received
+754.7015353333327: Broker: The number of finished Cloudlets is:216
+759.9240353333327: Broker: Cloudlet #218 return received
+759.9240353333327: Broker: The number of finished Cloudlets is:217
+761.4430353333327: Broker: Cloudlet #198 return received
+761.4430353333327: Broker: The number of finished Cloudlets is:218
+762.0210353333326: Broker: Cloudlet #207 return received
+762.0210353333326: Broker: The number of finished Cloudlets is:219
+765.6035353333326: Broker: Cloudlet #226 return received
+765.6035353333326: Broker: The number of finished Cloudlets is:220
+770.4371353333327: Broker: Cloudlet #223 return received
+770.4371353333327: Broker: The number of finished Cloudlets is:221
+772.9598019999993: Broker: Cloudlet #212 return received
+772.9598019999993: Broker: The number of finished Cloudlets is:222
+776.858468666666: Broker: Cloudlet #225 return received
+776.858468666666: Broker: The number of finished Cloudlets is:223
+781.910468666666: Broker: Cloudlet #224 return received
+781.910468666666: Broker: The number of finished Cloudlets is:224
+783.0271353333327: Broker: Cloudlet #222 return received
+783.0271353333327: Broker: The number of finished Cloudlets is:225
+784.3156353333327: Broker: Cloudlet #220 return received
+784.3156353333327: Broker: The number of finished Cloudlets is:226
+787.2228353333327: Broker: Cloudlet #230 return received
+787.2228353333327: Broker: The number of finished Cloudlets is:227
+789.508168666666: Broker: Cloudlet #232 return received
+789.508168666666: Broker: The number of finished Cloudlets is:228
+800.0749686666661: Broker: Cloudlet #233 return received
+800.0749686666661: Broker: The number of finished Cloudlets is:229
+803.7189686666661: Broker: Cloudlet #235 return received
+803.7189686666661: Broker: The number of finished Cloudlets is:230
+805.9565686666662: Broker: Cloudlet #238 return received
+805.9565686666662: Broker: The number of finished Cloudlets is:231
+806.5549686666661: Broker: Cloudlet #236 return received
+806.5549686666661: Broker: The number of finished Cloudlets is:232
+811.0264686666661: Broker: Cloudlet #229 return received
+811.0264686666661: Broker: The number of finished Cloudlets is:233
+817.7624686666661: Broker: Cloudlet #241 return received
+817.7624686666661: Broker: The number of finished Cloudlets is:234
+828.9074686666661: Broker: Cloudlet #221 return received
+828.9074686666661: Broker: The number of finished Cloudlets is:235
+834.5128019999994: Broker: Cloudlet #231 return received
+834.5128019999994: Broker: The number of finished Cloudlets is:236
+835.1998019999994: Broker: Cloudlet #228 return received
+835.1998019999994: Broker: The number of finished Cloudlets is:237
+839.6086019999995: Broker: Cloudlet #240 return received
+839.6086019999995: Broker: The number of finished Cloudlets is:238
+848.5199353333328: Broker: Cloudlet #234 return received
+848.5199353333328: Broker: The number of finished Cloudlets is:239
+848.6029353333328: Broker: Cloudlet #227 return received
+848.6029353333328: Broker: The number of finished Cloudlets is:240
+849.5229353333327: Broker: Cloudlet #242 return received
+849.5229353333327: Broker: The number of finished Cloudlets is:241
+851.9069353333327: Broker: Cloudlet #237 return received
+851.9069353333327: Broker: The number of finished Cloudlets is:242
+852.6984353333328: Broker: Cloudlet #239 return received
+852.6984353333328: Broker: The number of finished Cloudlets is:243
+856.6604353333328: Broker: Cloudlet #243 return received
+856.6604353333328: Broker: The number of finished Cloudlets is:244
+863.3028353333327: Broker: Cloudlet #247 return received
+863.3028353333327: Broker: The number of finished Cloudlets is:245
+875.1268353333327: Broker: Cloudlet #251 return received
+875.1268353333327: Broker: The number of finished Cloudlets is:246
+877.7448353333327: Broker: Cloudlet #254 return received
+877.7448353333327: Broker: The number of finished Cloudlets is:247
+877.9558353333327: Broker: Cloudlet #244 return received
+877.9558353333327: Broker: The number of finished Cloudlets is:248
+879.735168666666: Broker: Cloudlet #248 return received
+879.735168666666: Broker: The number of finished Cloudlets is:249
+883.533168666666: Broker: Cloudlet #249 return received
+883.533168666666: Broker: The number of finished Cloudlets is:250
+886.913968666666: Broker: Cloudlet #256 return received
+886.913968666666: Broker: The number of finished Cloudlets is:251
+892.3559686666661: Broker: Cloudlet #258 return received
+892.3559686666661: Broker: The number of finished Cloudlets is:252
+893.5859686666661: Broker: Cloudlet #250 return received
+893.5859686666661: Broker: The number of finished Cloudlets is:253
+893.995568666666: Broker: Cloudlet #253 return received
+893.995568666666: Broker: The number of finished Cloudlets is:254
+897.9722353333327: Broker: Cloudlet #245 return received
+897.9722353333327: Broker: The number of finished Cloudlets is:255
+899.5867353333327: Broker: Cloudlet #252 return received
+899.5867353333327: Broker: The number of finished Cloudlets is:256
+902.9263353333328: Broker: Cloudlet #260 return received
+902.9263353333328: Broker: The number of finished Cloudlets is:257
+910.6268353333328: Broker: Cloudlet #262 return received
+910.6268353333328: Broker: The number of finished Cloudlets is:258
+911.8568353333328: Broker: Cloudlet #255 return received
+911.8568353333328: Broker: The number of finished Cloudlets is:259
+914.1640353333328: Broker: Cloudlet #266 return received
+914.1640353333328: Broker: The number of finished Cloudlets is:260
+917.6470353333327: Broker: Cloudlet #246 return received
+917.6470353333327: Broker: The number of finished Cloudlets is:261
+921.5920353333328: Broker: Cloudlet #257 return received
+921.5920353333328: Broker: The number of finished Cloudlets is:262
+928.3260353333328: Broker: Cloudlet #264 return received
+928.3260353333328: Broker: The number of finished Cloudlets is:263
+930.8880353333328: Broker: Cloudlet #269 return received
+930.8880353333328: Broker: The number of finished Cloudlets is:264
+933.0940353333328: Broker: Cloudlet #263 return received
+933.0940353333328: Broker: The number of finished Cloudlets is:265
+934.2210353333328: Broker: Cloudlet #265 return received
+934.2210353333328: Broker: The number of finished Cloudlets is:266
+941.9885353333328: Broker: Cloudlet #275 return received
+941.9885353333328: Broker: The number of finished Cloudlets is:267
+946.7232019999994: Broker: Cloudlet #261 return received
+946.7232019999994: Broker: The number of finished Cloudlets is:268
+947.3018686666661: Broker: Cloudlet #268 return received
+947.3018686666661: Broker: The number of finished Cloudlets is:269
+949.0518686666661: Broker: Cloudlet #259 return received
+949.0518686666661: Broker: The number of finished Cloudlets is:270
+949.1698686666662: Broker: Cloudlet #267 return received
+949.1698686666662: Broker: The number of finished Cloudlets is:271
+952.5358686666661: Broker: Cloudlet #270 return received
+952.5358686666661: Broker: The number of finished Cloudlets is:272
+956.6210686666661: Broker: Cloudlet #274 return received
+956.6210686666661: Broker: The number of finished Cloudlets is:273
+960.1124019999995: Broker: Cloudlet #278 return received
+960.1124019999995: Broker: The number of finished Cloudlets is:274
+963.8488019999995: Broker: Cloudlet #273 return received
+963.8488019999995: Broker: The number of finished Cloudlets is:275
+973.1398019999996: Broker: Cloudlet #271 return received
+973.1398019999996: Broker: The number of finished Cloudlets is:276
+976.7938019999996: Broker: Cloudlet #283 return received
+976.7938019999996: Broker: The number of finished Cloudlets is:277
+978.0254019999995: Broker: Cloudlet #282 return received
+978.0254019999995: Broker: The number of finished Cloudlets is:278
+978.3094019999995: Broker: Cloudlet #276 return received
+978.3094019999995: Broker: The number of finished Cloudlets is:279
+981.3604019999996: Broker: Cloudlet #281 return received
+981.3604019999996: Broker: The number of finished Cloudlets is:280
+985.1384019999996: Broker: Cloudlet #284 return received
+985.1384019999996: Broker: The number of finished Cloudlets is:281
+987.6034019999996: Broker: Cloudlet #279 return received
+987.6034019999996: Broker: The number of finished Cloudlets is:282
+988.370735333333: Broker: Cloudlet #277 return received
+988.370735333333: Broker: The number of finished Cloudlets is:283
+994.446735333333: Broker: Cloudlet #272 return received
+994.446735333333: Broker: The number of finished Cloudlets is:284
+994.5692353333329: Broker: Cloudlet #288 return received
+994.5692353333329: Broker: The number of finished Cloudlets is:285
+995.2897353333329: Broker: Cloudlet #280 return received
+995.2897353333329: Broker: The number of finished Cloudlets is:286
+1004.7947353333329: Broker: Cloudlet #291 return received
+1004.7947353333329: Broker: The number of finished Cloudlets is:287
+1009.2577353333329: Broker: Cloudlet #285 return received
+1009.2577353333329: Broker: The number of finished Cloudlets is:288
+1010.1101353333329: Broker: Cloudlet #287 return received
+1010.1101353333329: Broker: The number of finished Cloudlets is:289
+1013.0561353333329: Broker: Cloudlet #286 return received
+1013.0561353333329: Broker: The number of finished Cloudlets is:290
+1015.752135333333: Broker: Cloudlet #292 return received
+1015.752135333333: Broker: The number of finished Cloudlets is:291
+1015.8705353333329: Broker: Cloudlet #298 return received
+1015.8705353333329: Broker: The number of finished Cloudlets is:292
+1022.2593353333328: Broker: Cloudlet #290 return received
+1022.2593353333328: Broker: The number of finished Cloudlets is:293
+1026.2266686666662: Broker: Cloudlet #293 return received
+1026.2266686666662: Broker: The number of finished Cloudlets is:294
+1031.0446686666662: Broker: Cloudlet #295 return received
+1031.0446686666662: Broker: The number of finished Cloudlets is:295
+1038.8546686666662: Broker: Cloudlet #294 return received
+1038.8546686666662: Broker: The number of finished Cloudlets is:296
+1048.2380019999996: Broker: Cloudlet #303 return received
+1048.2380019999996: Broker: The number of finished Cloudlets is:297
+1049.1600019999996: Broker: Cloudlet #301 return received
+1049.1600019999996: Broker: The number of finished Cloudlets is:298
+1051.3350019999996: Broker: Cloudlet #305 return received
+1051.3350019999996: Broker: The number of finished Cloudlets is:299
+1056.2234019999996: Broker: Cloudlet #302 return received
+1056.2234019999996: Broker: The number of finished Cloudlets is:300
+1070.790735333333: Broker: Cloudlet #299 return received
+1070.790735333333: Broker: The number of finished Cloudlets is:301
+1071.994735333333: Broker: Cloudlet #309 return received
+1071.994735333333: Broker: The number of finished Cloudlets is:302
+1072.332235333333: Broker: Cloudlet #304 return received
+1072.332235333333: Broker: The number of finished Cloudlets is:303
+1073.728235333333: Broker: Cloudlet #289 return received
+1073.728235333333: Broker: The number of finished Cloudlets is:304
+1075.042235333333: Broker: Cloudlet #296 return received
+1075.042235333333: Broker: The number of finished Cloudlets is:305
+1078.294235333333: Broker: Cloudlet #310 return received
+1078.294235333333: Broker: The number of finished Cloudlets is:306
+1078.535235333333: Broker: Cloudlet #308 return received
+1078.535235333333: Broker: The number of finished Cloudlets is:307
+1080.6965686666663: Broker: Cloudlet #300 return received
+1080.6965686666663: Broker: The number of finished Cloudlets is:308
+1087.865235333333: Broker: Cloudlet #317 return received
+1087.865235333333: Broker: The number of finished Cloudlets is:309
+1088.643235333333: Broker: Cloudlet #307 return received
+1088.643235333333: Broker: The number of finished Cloudlets is:310
+1093.342235333333: Broker: Cloudlet #297 return received
+1093.342235333333: Broker: The number of finished Cloudlets is:311
+1094.0095686666664: Broker: Cloudlet #306 return received
+1094.0095686666664: Broker: The number of finished Cloudlets is:312
+1097.5095686666664: Broker: Cloudlet #311 return received
+1097.5095686666664: Broker: The number of finished Cloudlets is:313
+1101.4655686666663: Broker: Cloudlet #312 return received
+1101.4655686666663: Broker: The number of finished Cloudlets is:314
+1103.1249019999996: Broker: Cloudlet #321 return received
+1103.1249019999996: Broker: The number of finished Cloudlets is:315
+1107.7401019999995: Broker: Cloudlet #322 return received
+1107.7401019999995: Broker: The number of finished Cloudlets is:316
+1121.4356019999996: Broker: Cloudlet #316 return received
+1121.4356019999996: Broker: The number of finished Cloudlets is:317
+1125.9546019999996: Broker: Cloudlet #323 return received
+1125.9546019999996: Broker: The number of finished Cloudlets is:318
+1126.9719353333328: Broker: Cloudlet #318 return received
+1126.9719353333328: Broker: The number of finished Cloudlets is:319
+1127.3271353333328: Broker: Cloudlet #319 return received
+1127.3271353333328: Broker: The number of finished Cloudlets is:320
+1135.2578019999994: Broker: Cloudlet #315 return received
+1135.2578019999994: Broker: The number of finished Cloudlets is:321
+1138.7808019999993: Broker: Cloudlet #313 return received
+1138.7808019999993: Broker: The number of finished Cloudlets is:322
+1144.2496019999994: Broker: Cloudlet #325 return received
+1144.2496019999994: Broker: The number of finished Cloudlets is:323
+1144.924268666666: Broker: Cloudlet #330 return received
+1144.924268666666: Broker: The number of finished Cloudlets is:324
+1150.365268666666: Broker: Cloudlet #331 return received
+1150.365268666666: Broker: The number of finished Cloudlets is:325
+1151.305268666666: Broker: Cloudlet #314 return received
+1151.305268666666: Broker: The number of finished Cloudlets is:326
+1152.0667686666661: Broker: Cloudlet #326 return received
+1152.0667686666661: Broker: The number of finished Cloudlets is:327
+1152.878768666666: Broker: Cloudlet #329 return received
+1152.878768666666: Broker: The number of finished Cloudlets is:328
+1154.584768666666: Broker: Cloudlet #332 return received
+1154.584768666666: Broker: The number of finished Cloudlets is:329
+1164.7887686666659: Broker: Cloudlet #336 return received
+1164.7887686666659: Broker: The number of finished Cloudlets is:330
+1166.1767686666658: Broker: Cloudlet #333 return received
+1166.1767686666658: Broker: The number of finished Cloudlets is:331
+1168.4234353333325: Broker: Cloudlet #324 return received
+1168.4234353333325: Broker: The number of finished Cloudlets is:332
+1169.6824353333325: Broker: Cloudlet #327 return received
+1169.6824353333325: Broker: The number of finished Cloudlets is:333
+1173.5156353333325: Broker: Cloudlet #338 return received
+1173.5156353333325: Broker: The number of finished Cloudlets is:334
+1175.6176353333326: Broker: Cloudlet #320 return received
+1175.6176353333326: Broker: The number of finished Cloudlets is:335
+1175.832968666666: Broker: Cloudlet #328 return received
+1175.832968666666: Broker: The number of finished Cloudlets is:336
+1178.077368666666: Broker: Cloudlet #343 return received
+1178.077368666666: Broker: The number of finished Cloudlets is:337
+1186.521868666666: Broker: Cloudlet #339 return received
+1186.521868666666: Broker: The number of finished Cloudlets is:338
+1189.297868666666: Broker: Cloudlet #337 return received
+1189.297868666666: Broker: The number of finished Cloudlets is:339
+1190.105368666666: Broker: Cloudlet #342 return received
+1190.105368666666: Broker: The number of finished Cloudlets is:340
+1192.192368666666: Broker: Cloudlet #347 return received
+1192.192368666666: Broker: The number of finished Cloudlets is:341
+1197.5730353333327: Broker: Cloudlet #345 return received
+1197.5730353333327: Broker: The number of finished Cloudlets is:342
+1199.1360353333328: Broker: Cloudlet #350 return received
+1199.1360353333328: Broker: The number of finished Cloudlets is:343
+1210.5013686666662: Broker: Cloudlet #340 return received
+1210.5013686666662: Broker: The number of finished Cloudlets is:344
+1211.7329686666662: Broker: Cloudlet #346 return received
+1211.7329686666662: Broker: The number of finished Cloudlets is:345
+1212.6349686666663: Broker: Cloudlet #334 return received
+1212.6349686666663: Broker: The number of finished Cloudlets is:346
+1220.7581686666663: Broker: Cloudlet #348 return received
+1220.7581686666663: Broker: The number of finished Cloudlets is:347
+1221.9741686666662: Broker: Cloudlet #353 return received
+1221.9741686666662: Broker: The number of finished Cloudlets is:348
+1224.0386686666661: Broker: Cloudlet #352 return received
+1224.0386686666661: Broker: The number of finished Cloudlets is:349
+1229.9578686666662: Broker: Cloudlet #356 return received
+1229.9578686666662: Broker: The number of finished Cloudlets is:350
+1231.5832019999996: Broker: Cloudlet #341 return received
+1231.5832019999996: Broker: The number of finished Cloudlets is:351
+1233.7408019999996: Broker: Cloudlet #354 return received
+1233.7408019999996: Broker: The number of finished Cloudlets is:352
+1238.0718019999995: Broker: Cloudlet #349 return received
+1238.0718019999995: Broker: The number of finished Cloudlets is:353
+1241.1346019999994: Broker: Cloudlet #361 return received
+1241.1346019999994: Broker: The number of finished Cloudlets is:354
+1242.5059353333327: Broker: Cloudlet #357 return received
+1242.5059353333327: Broker: The number of finished Cloudlets is:355
+1244.2526019999993: Broker: Cloudlet #351 return received
+1244.2526019999993: Broker: The number of finished Cloudlets is:356
+1247.8046019999992: Broker: Cloudlet #355 return received
+1247.8046019999992: Broker: The number of finished Cloudlets is:357
+1247.8146029999994: Broker: Cloudlet #335 return received
+1247.8146029999994: Broker: The number of finished Cloudlets is:358
+1249.6259363333327: Broker: Cloudlet #364 return received
+1249.6259363333327: Broker: The number of finished Cloudlets is:359
+1251.4394363333327: Broker: Cloudlet #362 return received
+1251.4394363333327: Broker: The number of finished Cloudlets is:360
+1252.0901029999993: Broker: Cloudlet #365 return received
+1252.0901029999993: Broker: The number of finished Cloudlets is:361
+1258.3829029999993: Broker: Cloudlet #359 return received
+1258.3829029999993: Broker: The number of finished Cloudlets is:362
+1258.9239029999992: Broker: Cloudlet #358 return received
+1258.9239029999992: Broker: The number of finished Cloudlets is:363
+1260.6799029999993: Broker: Cloudlet #344 return received
+1260.6799029999993: Broker: The number of finished Cloudlets is:364
+1263.0219029999994: Broker: Cloudlet #360 return received
+1263.0219029999994: Broker: The number of finished Cloudlets is:365
+1264.2943029999994: Broker: Cloudlet #371 return received
+1264.2943029999994: Broker: The number of finished Cloudlets is:366
+1266.3303029999995: Broker: Cloudlet #367 return received
+1266.3303029999995: Broker: The number of finished Cloudlets is:367
+1270.5059029999995: Broker: Cloudlet #363 return received
+1270.5059029999995: Broker: The number of finished Cloudlets is:368
+1279.6745696666662: Broker: Cloudlet #374 return received
+1279.6745696666662: Broker: The number of finished Cloudlets is:369
+1282.0393696666663: Broker: Cloudlet #377 return received
+1282.0393696666663: Broker: The number of finished Cloudlets is:370
+1288.1309696666663: Broker: Cloudlet #375 return received
+1288.1309696666663: Broker: The number of finished Cloudlets is:371
+1289.2064696666662: Broker: Cloudlet #372 return received
+1289.2064696666662: Broker: The number of finished Cloudlets is:372
+1289.5539696666663: Broker: Cloudlet #369 return received
+1289.5539696666663: Broker: The number of finished Cloudlets is:373
+1291.0039696666663: Broker: Cloudlet #366 return received
+1291.0039696666663: Broker: The number of finished Cloudlets is:374
+1292.2195696666663: Broker: Cloudlet #379 return received
+1292.2195696666663: Broker: The number of finished Cloudlets is:375
+1297.1089029999996: Broker: Cloudlet #368 return received
+1297.1089029999996: Broker: The number of finished Cloudlets is:376
+1302.3481029999996: Broker: Cloudlet #380 return received
+1302.3481029999996: Broker: The number of finished Cloudlets is:377
+1305.1265029999995: Broker: Cloudlet #384 return received
+1305.1265029999995: Broker: The number of finished Cloudlets is:378
+1307.5705029999995: Broker: Cloudlet #370 return received
+1307.5705029999995: Broker: The number of finished Cloudlets is:379
+1311.4505029999996: Broker: Cloudlet #385 return received
+1311.4505029999996: Broker: The number of finished Cloudlets is:380
+1313.4285029999996: Broker: Cloudlet #373 return received
+1313.4285029999996: Broker: The number of finished Cloudlets is:381
+1321.7969029999997: Broker: Cloudlet #387 return received
+1321.7969029999997: Broker: The number of finished Cloudlets is:382
+1326.3064029999996: Broker: Cloudlet #382 return received
+1326.3064029999996: Broker: The number of finished Cloudlets is:383
+1328.2352029999995: Broker: Cloudlet #391 return received
+1328.2352029999995: Broker: The number of finished Cloudlets is:384
+1328.2452039999996: Broker: Cloudlet #386 return received
+1328.2452039999996: Broker: The number of finished Cloudlets is:385
+1328.5212039999997: Broker: Cloudlet #390 return received
+1328.5212039999997: Broker: The number of finished Cloudlets is:386
+1334.2552039999996: Broker: Cloudlet #392 return received
+1334.2552039999996: Broker: The number of finished Cloudlets is:387
+1334.8156039999997: Broker: Cloudlet #394 return received
+1334.8156039999997: Broker: The number of finished Cloudlets is:388
+1336.0302706666664: Broker: Cloudlet #378 return received
+1336.0302706666664: Broker: The number of finished Cloudlets is:389
+1336.1247706666663: Broker: Cloudlet #381 return received
+1336.1247706666663: Broker: The number of finished Cloudlets is:390
+1339.3931706666663: Broker: Cloudlet #393 return received
+1339.3931706666663: Broker: The number of finished Cloudlets is:391
+1346.3761706666662: Broker: Cloudlet #376 return received
+1346.3761706666662: Broker: The number of finished Cloudlets is:392
+1351.7701706666662: Broker: Cloudlet #388 return received
+1351.7701706666662: Broker: The number of finished Cloudlets is:393
+1358.7511706666662: Broker: Cloudlet #399 return received
+1358.7511706666662: Broker: The number of finished Cloudlets is:394
+1364.5461706666663: Broker: Cloudlet #383 return received
+1364.5461706666663: Broker: The number of finished Cloudlets is:395
+1366.9281706666663: Broker: Cloudlet #389 return received
+1366.9281706666663: Broker: The number of finished Cloudlets is:396
+1368.0066706666664: Broker: Cloudlet #403 return received
+1368.0066706666664: Broker: The number of finished Cloudlets is:397
+1369.2090706666663: Broker: Cloudlet #397 return received
+1369.2090706666663: Broker: The number of finished Cloudlets is:398
+1370.7524039999996: Broker: Cloudlet #398 return received
+1370.7524039999996: Broker: The number of finished Cloudlets is:399
+1374.7836039999995: Broker: Cloudlet #400 return received
+1374.7836039999995: Broker: The number of finished Cloudlets is:400
+1376.0106039999996: Broker: Cloudlet #401 return received
+1376.0106039999996: Broker: The number of finished Cloudlets is:401
+1381.3546039999997: Broker: Cloudlet #409 return received
+1381.3546039999997: Broker: The number of finished Cloudlets is:402
+1382.4256039999996: Broker: Cloudlet #396 return received
+1382.4256039999996: Broker: The number of finished Cloudlets is:403
+1387.764937333333: Broker: Cloudlet #408 return received
+1387.764937333333: Broker: The number of finished Cloudlets is:404
+1395.542937333333: Broker: Cloudlet #404 return received
+1395.542937333333: Broker: The number of finished Cloudlets is:405
+1401.690137333333: Broker: Cloudlet #407 return received
+1401.690137333333: Broker: The number of finished Cloudlets is:406
+1409.304637333333: Broker: Cloudlet #412 return received
+1409.304637333333: Broker: The number of finished Cloudlets is:407
+1412.132637333333: Broker: Cloudlet #411 return received
+1412.132637333333: Broker: The number of finished Cloudlets is:408
+1413.679637333333: Broker: Cloudlet #414 return received
+1413.679637333333: Broker: The number of finished Cloudlets is:409
+1414.853637333333: Broker: Cloudlet #402 return received
+1414.853637333333: Broker: The number of finished Cloudlets is:410
+1416.8006373333328: Broker: Cloudlet #406 return received
+1416.8006373333328: Broker: The number of finished Cloudlets is:411
+1418.3819706666661: Broker: Cloudlet #413 return received
+1418.3819706666661: Broker: The number of finished Cloudlets is:412
+1422.558970666666: Broker: Cloudlet #410 return received
+1422.558970666666: Broker: The number of finished Cloudlets is:413
+1424.141970666666: Broker: Cloudlet #395 return received
+1424.141970666666: Broker: The number of finished Cloudlets is:414
+1431.418470666666: Broker: Cloudlet #420 return received
+1431.418470666666: Broker: The number of finished Cloudlets is:415
+1431.4991373333328: Broker: Cloudlet #405 return received
+1431.4991373333328: Broker: The number of finished Cloudlets is:416
+1432.7141373333327: Broker: Cloudlet #416 return received
+1432.7141373333327: Broker: The number of finished Cloudlets is:417
+1439.8645373333327: Broker: Cloudlet #415 return received
+1439.8645373333327: Broker: The number of finished Cloudlets is:418
+1449.1781373333326: Broker: Cloudlet #417 return received
+1449.1781373333326: Broker: The number of finished Cloudlets is:419
+1453.6101373333327: Broker: Cloudlet #423 return received
+1453.6101373333327: Broker: The number of finished Cloudlets is:420
+1456.2129373333325: Broker: Cloudlet #428 return received
+1456.2129373333325: Broker: The number of finished Cloudlets is:421
+1457.7097373333324: Broker: Cloudlet #427 return received
+1457.7097373333324: Broker: The number of finished Cloudlets is:422
+1462.9137373333324: Broker: Cloudlet #430 return received
+1462.9137373333324: Broker: The number of finished Cloudlets is:423
+1465.2397373333324: Broker: Cloudlet #426 return received
+1465.2397373333324: Broker: The number of finished Cloudlets is:424
+1466.6572373333324: Broker: Cloudlet #424 return received
+1466.6572373333324: Broker: The number of finished Cloudlets is:425
+1469.5925706666658: Broker: Cloudlet #421 return received
+1469.5925706666658: Broker: The number of finished Cloudlets is:426
+1477.4279039999992: Broker: Cloudlet #419 return received
+1477.4279039999992: Broker: The number of finished Cloudlets is:427
+1478.2469039999992: Broker: Cloudlet #433 return received
+1478.2469039999992: Broker: The number of finished Cloudlets is:428
+1484.7769039999991: Broker: Cloudlet #431 return received
+1484.7769039999991: Broker: The number of finished Cloudlets is:429
+1494.4137039999991: Broker: Cloudlet #432 return received
+1494.4137039999991: Broker: The number of finished Cloudlets is:430
+1497.417703999999: Broker: Cloudlet #425 return received
+1497.417703999999: Broker: The number of finished Cloudlets is:431
+1497.574703999999: Broker: Cloudlet #429 return received
+1497.574703999999: Broker: The number of finished Cloudlets is:432
+1497.730703999999: Broker: Cloudlet #435 return received
+1497.730703999999: Broker: The number of finished Cloudlets is:433
+1498.5327039999988: Broker: Cloudlet #418 return received
+1498.5327039999988: Broker: The number of finished Cloudlets is:434
+1503.9602039999988: Broker: Cloudlet #434 return received
+1503.9602039999988: Broker: The number of finished Cloudlets is:435
+1510.2938039999988: Broker: Cloudlet #438 return received
+1510.2938039999988: Broker: The number of finished Cloudlets is:436
+1514.0228039999988: Broker: Cloudlet #422 return received
+1514.0228039999988: Broker: The number of finished Cloudlets is:437
+1521.3174706666655: Broker: Cloudlet #436 return received
+1521.3174706666655: Broker: The number of finished Cloudlets is:438
+1525.2986706666654: Broker: Cloudlet #439 return received
+1525.2986706666654: Broker: The number of finished Cloudlets is:439
+1527.6446706666654: Broker: Cloudlet #437 return received
+1527.6446706666654: Broker: The number of finished Cloudlets is:440
+1529.5001706666653: Broker: Cloudlet #444 return received
+1529.5001706666653: Broker: The number of finished Cloudlets is:441
+1529.6205706666653: Broker: Cloudlet #445 return received
+1529.6205706666653: Broker: The number of finished Cloudlets is:442
+1548.6805706666653: Broker: Cloudlet #446 return received
+1548.6805706666653: Broker: The number of finished Cloudlets is:443
+1549.7865706666653: Broker: Cloudlet #440 return received
+1549.7865706666653: Broker: The number of finished Cloudlets is:444
+1553.9409706666652: Broker: Cloudlet #448 return received
+1553.9409706666652: Broker: The number of finished Cloudlets is:445
+1555.780970666665: Broker: Cloudlet #442 return received
+1555.780970666665: Broker: The number of finished Cloudlets is:446
+1557.1557706666651: Broker: Cloudlet #451 return received
+1557.1557706666651: Broker: The number of finished Cloudlets is:447
+1557.7464373333319: Broker: Cloudlet #453 return received
+1557.7464373333319: Broker: The number of finished Cloudlets is:448
+1561.2854373333319: Broker: Cloudlet #449 return received
+1561.2854373333319: Broker: The number of finished Cloudlets is:449
+1564.543437333332: Broker: Cloudlet #441 return received
+1564.543437333332: Broker: The number of finished Cloudlets is:450
+1566.6594373333319: Broker: Cloudlet #443 return received
+1566.6594373333319: Broker: The number of finished Cloudlets is:451
+1569.746937333332: Broker: Cloudlet #450 return received
+1569.746937333332: Broker: The number of finished Cloudlets is:452
+1571.354937333332: Broker: Cloudlet #455 return received
+1571.354937333332: Broker: The number of finished Cloudlets is:453
+1571.9939373333318: Broker: Cloudlet #452 return received
+1571.9939373333318: Broker: The number of finished Cloudlets is:454
+1575.3409373333318: Broker: Cloudlet #458 return received
+1575.3409373333318: Broker: The number of finished Cloudlets is:455
+1578.5056039999984: Broker: Cloudlet #447 return received
+1578.5056039999984: Broker: The number of finished Cloudlets is:456
+1580.3764039999983: Broker: Cloudlet #456 return received
+1580.3764039999983: Broker: The number of finished Cloudlets is:457
+1591.5036039999982: Broker: Cloudlet #454 return received
+1591.5036039999982: Broker: The number of finished Cloudlets is:458
+1594.4149373333314: Broker: Cloudlet #457 return received
+1594.4149373333314: Broker: The number of finished Cloudlets is:459
+1601.2234373333315: Broker: Cloudlet #461 return received
+1601.2234373333315: Broker: The number of finished Cloudlets is:460
+1602.9564373333315: Broker: Cloudlet #459 return received
+1602.9564373333315: Broker: The number of finished Cloudlets is:461
+1608.0129373333314: Broker: Cloudlet #464 return received
+1608.0129373333314: Broker: The number of finished Cloudlets is:462
+1608.5629373333313: Broker: Cloudlet #460 return received
+1608.5629373333313: Broker: The number of finished Cloudlets is:463
+1616.9013373333314: Broker: Cloudlet #466 return received
+1616.9013373333314: Broker: The number of finished Cloudlets is:464
+1623.7746706666646: Broker: Cloudlet #465 return received
+1623.7746706666646: Broker: The number of finished Cloudlets is:465
+1630.0754706666646: Broker: Cloudlet #467 return received
+1630.0754706666646: Broker: The number of finished Cloudlets is:466
+1630.9114706666646: Broker: Cloudlet #462 return received
+1630.9114706666646: Broker: The number of finished Cloudlets is:467
+1635.2999706666646: Broker: Cloudlet #469 return received
+1635.2999706666646: Broker: The number of finished Cloudlets is:468
+1640.8489706666646: Broker: Cloudlet #471 return received
+1640.8489706666646: Broker: The number of finished Cloudlets is:469
+1644.9756373333314: Broker: Cloudlet #476 return received
+1644.9756373333314: Broker: The number of finished Cloudlets is:470
+1648.8336373333314: Broker: Cloudlet #475 return received
+1648.8336373333314: Broker: The number of finished Cloudlets is:471
+1649.152303999998: Broker: Cloudlet #468 return received
+1649.152303999998: Broker: The number of finished Cloudlets is:472
+1650.813503999998: Broker: Cloudlet #473 return received
+1650.813503999998: Broker: The number of finished Cloudlets is:473
+1658.043503999998: Broker: Cloudlet #481 return received
+1658.043503999998: Broker: The number of finished Cloudlets is:474
+1659.0131039999978: Broker: Cloudlet #482 return received
+1659.0131039999978: Broker: The number of finished Cloudlets is:475
+1661.2315039999978: Broker: Cloudlet #480 return received
+1661.2315039999978: Broker: The number of finished Cloudlets is:476
+1664.3585039999978: Broker: Cloudlet #477 return received
+1664.3585039999978: Broker: The number of finished Cloudlets is:477
+1666.5425039999977: Broker: Cloudlet #483 return received
+1666.5425039999977: Broker: The number of finished Cloudlets is:478
+1669.0751706666645: Broker: Cloudlet #479 return received
+1669.0751706666645: Broker: The number of finished Cloudlets is:479
+1669.3247706666646: Broker: Cloudlet #485 return received
+1669.3247706666646: Broker: The number of finished Cloudlets is:480
+1671.9767706666646: Broker: Cloudlet #463 return received
+1671.9767706666646: Broker: The number of finished Cloudlets is:481
+1672.4237706666645: Broker: Cloudlet #470 return received
+1672.4237706666645: Broker: The number of finished Cloudlets is:482
+1676.0467706666645: Broker: Cloudlet #472 return received
+1676.0467706666645: Broker: The number of finished Cloudlets is:483
+1677.622103999998: Broker: Cloudlet #487 return received
+1677.622103999998: Broker: The number of finished Cloudlets is:484
+1678.872103999998: Broker: Cloudlet #478 return received
+1678.872103999998: Broker: The number of finished Cloudlets is:485
+1682.610103999998: Broker: Cloudlet #474 return received
+1682.610103999998: Broker: The number of finished Cloudlets is:486
+1683.9341039999981: Broker: Cloudlet #491 return received
+1683.9341039999981: Broker: The number of finished Cloudlets is:487
+1686.589103999998: Broker: Cloudlet #486 return received
+1686.589103999998: Broker: The number of finished Cloudlets is:488
+1692.897903999998: Broker: Cloudlet #489 return received
+1692.897903999998: Broker: The number of finished Cloudlets is:489
+1693.558303999998: Broker: Cloudlet #484 return received
+1693.558303999998: Broker: The number of finished Cloudlets is:490
+1697.925503999998: Broker: Cloudlet #498 return received
+1697.925503999998: Broker: The number of finished Cloudlets is:491
+1700.258503999998: Broker: Cloudlet #494 return received
+1700.258503999998: Broker: The number of finished Cloudlets is:492
+1701.007503999998: Broker: Cloudlet #497 return received
+1701.007503999998: Broker: The number of finished Cloudlets is:493
+1707.756703999998: Broker: Cloudlet #499 return received
+1707.756703999998: Broker: The number of finished Cloudlets is:494
+1712.9853706666647: Broker: Cloudlet #488 return received
+1712.9853706666647: Broker: The number of finished Cloudlets is:495
+1718.7043706666648: Broker: Cloudlet #496 return received
+1718.7043706666648: Broker: The number of finished Cloudlets is:496
+1720.3643706666649: Broker: Cloudlet #492 return received
+1720.3643706666649: Broker: The number of finished Cloudlets is:497
+1721.3593706666647: Broker: Cloudlet #490 return received
+1721.3593706666647: Broker: The number of finished Cloudlets is:498
+1736.8273706666648: Broker: Cloudlet #493 return received
+1736.8273706666648: Broker: The number of finished Cloudlets is:499
+1739.4420373333314: Broker: Cloudlet #495 return received
+1739.4420373333314: Broker: The number of finished Cloudlets is:500
+1739.4420373333314: Broker: All Cloudlets executed. Finishing...
+1739.4420373333314: Broker: Destroying Vm #0
+1739.4420373333314: Broker: Destroying Vm #1
+1739.4420373333314: Broker: Destroying Vm #2
+1739.4420373333314: Broker: Destroying Vm #3
+1739.4420373333314: Broker: Destroying Vm #4
+1739.4420373333314: Broker: Destroying Vm #5
+1739.4420373333314: Broker: Destroying Vm #6
+1739.4420373333314: Broker: Destroying Vm #7
+1739.4420373333314: Broker: Destroying Vm #8
+1739.4420373333314: Broker: Destroying Vm #9
+1739.4420373333314: Broker is shutting down...
+1739.4420373333314: Simulation: No more future events
+1739.4420373333314: CloudInformationService is shutting down...
+1739.4420373333314: CloudInformationService: Notify all CloudSim entities for shutting down.
+1739.4420373333314: Datacenter is shutting down...
+1739.4420373333314: Broker is shutting down...
+Simulation completed.
+Simulation completed.
+FCFS: 500/500 tasks, makespan=1739.442 s, cost=25.181112; output=/home/ben/Projects/kuliah/SOKA/cloudsim/results/fcfs-500
+
