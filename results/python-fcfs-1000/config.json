@@ -1,0 +1,30 @@
+{
+  "tasks": 1000,
+  "vms": 8,
+  "datacenters": 2,
+  "vm": {
+    "mips": 250,
+    "pes_number": 1,
+    "ram": 512,
+    "bandwidth": 1000,
+    "size": 10000,
+    "vmm": "Xen"
+  },
+  "workload": [
+    {
+      "name": "pendek",
+      "length": 10000,
+      "percentage": 50
+    },
+    {
+      "name": "sedang",
+      "length": 50000,
+      "percentage": 30
+    },
+    {
+      "name": "panjang",
+      "length": 100000,
+      "percentage": 20
+    }
+  ]
+}

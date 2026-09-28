@@ -1,3 +1,13 @@
+## Implementasi FCFS Python
+
+Versi Python menyediakan VM seragam, minimal dua datacenter, dataset task berdasarkan
+persentase yang konsisten, serta input pengguna dan dataset CSV yang bisa dipakai ulang.
+Lihat [panduan FCFS Python](fcfs/README.md) untuk konfigurasi dan contoh 1000/2000 task.
+
+```bash
+cloudsim/bin/python fcfs/fcfs_scheduler.py --interactive
+```
+
 # CloudSim: A Framework For Modeling And Simulation Of Cloud Computing Infrastructures And Services #
 
 Cloud Computing is the leading approach for delivering reliable, secure, fault-tolerant, sustainable, and scalable computational services. Hence timely, repeatable, and controllable methodologies for performance evaluation of new cloud applications and policies before their actual development are required. Because utilization of real testbeds limits the experiments to the scale of the testbed and makes the reproduction of results an extremely difficult undertaking, simulation may be used.
