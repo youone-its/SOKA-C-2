@@ -16,9 +16,10 @@ public class FCFSDatacenterBroker extends DatacenterBroker {
         double[] available = new double[vms.size()];
         for (int i = 0; i < tasks.size(); i++) {
             int selected = roundRobin ? i % vms.size() : 0;
-            if (!roundRobin) {
+            if (!roundRobin) { 
                 for (int j = 1; j < vms.size(); j++) {
-                    if (available[j] < available[selected]) selected = j;
+                    if (available[j] < available[selected]) 
+                    selected = j;
                 }
             }
             Cloudlet task = tasks.get(i);

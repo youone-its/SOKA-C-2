@@ -2206,6 +2206,3 @@ Simulation completed.
 Simulation completed.
 FCFS: 500/500 tasks, makespan=1739.442 s, cost=25.181112; output=/home/ben/Projects/kuliah/SOKA/cloudsim/results/fcfs-500
 
-FCFS: 200/200 tasks, makespan=862.542 s, cost=10.199648; output=/home/ben/Projects/kuliah/SOKA/cloudsim/results/fcfs
-
-FCFS: 200/200 tasks, makespan=862.542 s, cost=10.199648; output=/home/ben/Projects/kuliah/SOKA/cloudsim/results/fcfs

@@ -140,11 +140,27 @@ output yang sama akan memperbarui file hasil.
 
 ## Model simulasi
 
-PyCloudSim membuat dan mengalokasikan container yang mewakili VM. Pada model
-sederhana ini, **satu host mewakili setiap datacenter**, sehingga default 2 DC
-memiliki 2 host. Kapasitas CPU, RAM, dan penyimpanan host disesuaikan dengan
+PyCloudSim 1.0.7 membuat dan mengalokasikan container yang mewakili VM. Pada
+model sederhana ini, **satu host mewakili setiap datacenter**, sehingga default
+2 DC memiliki 2 host. Kapasitas CPU, RAM, dan penyimpanan host disesuaikan dengan
 jumlah VM dan spesifikasinya agar seluruh VM bisa dialokasikan. Alokasi aktual
 container diperiksa sebelum penjadwalan task.
+
+Jumlah host selalu sama dengan jumlah datacenter dan tidak dapat dikonfigurasi
+sendiri. Untuk 2 DC dan 8 VM, tiap host berkapasitas:
+
+| Sumber daya host | Nilai | Cara hitung |
+|---|---:|---|
+| `ipc` | 1 | konstanta |
+| `frequency` | 250 | mengikuti `mips` VM |
+| `cpu_tdps` | 150 | konstanta |
+| `cpu_mode` | 1 | konstanta |
+| `num_cores` | 4 | `vm_per_dc × pes_number` |
+| RAM | 2048 MiB | `ceil(vm_per_dc × ram / 1024)` |
+| ROM | 40 MiB | `ceil(vm_per_dc × size / 1024)` |
+
+PyCloudSim memakai satuan millicore, sehingga 1000 = satu core penuh. Container
+VM karena itu requesting `1000 × pes_number` milicore, bukan `pes_number`.
 
 Seluruh task datang pada waktu 0 dan diproses dalam urutan input. Pembagian task
 ke VM dilakukan bergantian (round-robin); pada tiap VM, antrean dilayani FCFS,
