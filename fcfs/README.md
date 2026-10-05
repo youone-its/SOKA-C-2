@@ -138,6 +138,36 @@ Gunakan `--show-tasks` untuk menampilkan seluruh tabel di terminal. Gunakan fold
 `--output` berbeda untuk menyimpan beberapa percobaan; menjalankan kembali ke folder
 output yang sama akan memperbarui file hasil.
 
+## Contoh hasil terverifikasi
+
+Dengan profil default, 8 VM seragam (250 MIPS, 1 PE), dan 2 datacenter,
+ringkasan terminal untuk 1000 task adalah:
+
+```text
+FCFS: 1000 task, 8 VM seragam, 2 datacenter.
+10,000 MI: 500 task (50.00%)
+50,000 MI: 300 task (30.00%)
+100,000 MI: 200 task (20.00%)
+Makespan FCFS: 22000.00 s
+```
+
+Untuk 2000 task, jumlah per kategori menjadi 1000, 600, dan 400,
+dengan makespan `44000.00 s`. Seluruh task selesai pada kedua percobaan.
+Dataset 1000 task identik dengan 1000 baris pertama dataset 2000 task.
+Contoh awal `dataset.csv`:
+
+```csv
+task_id,length_mi
+1,10000
+2,50000
+3,100000
+4,10000
+5,10000
+```
+
+Makespan ini merupakan hasil model waktu Python yang dijelaskan di bawah,
+dengan urutan deterministik dan pembagian round-robin yang digunakan proyek.
+
 ## Model simulasi
 
 PyCloudSim 1.0.7 membuat dan mengalokasikan container yang mewakili VM. Pada

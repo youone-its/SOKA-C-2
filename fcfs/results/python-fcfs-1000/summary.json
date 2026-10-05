@@ -1,0 +1,31 @@
+{
+  "algorithm": "FCFS",
+  "datacenters": 2,
+  "vms": 8,
+  "tasks": 1000,
+  "completed": 1000,
+  "makespan_s": 22000.0,
+  "mean_waiting_time_s": 9920.0,
+  "dataset_source": "profile",
+  "distribution": [
+    {
+      "length_mi": 10000,
+      "tasks": 500,
+      "percentage": 50.0
+    },
+    {
+      "length_mi": 50000,
+      "tasks": 300,
+      "percentage": 30.0
+    },
+    {
+      "length_mi": 100000,
+      "tasks": 200,
+      "percentage": 20.0
+    }
+  ],
+  "vm_distribution": {
+    "0": 4,
+    "1": 4
+  }
+}
