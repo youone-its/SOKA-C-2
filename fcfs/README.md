@@ -9,6 +9,16 @@ Setiap task memiliki ID mulai 1 dan panjang yang bisa diperiksa di `dataset.csv`
 Virtual environment `cloudsim` yang sudah ada dapat digunakan:
 
 ```bash
+cloudsim/bin/python fcfs/fcfs_scheduler.py --config fcfs/config.json --output results/fcfs-scheduler-config
+cloudsim/bin/python fcfs/fcfs_datacenter.py --config fcfs/config.json --output results/fcfs-datacenter-config
+```
+
+Kedua entry point membaca konfigurasi yang sama dan otomatis menghasilkan
+`metrics.png` dari hasil simulasi masing-masing. Jumlah task, pembagian VM ke
+datacenter, kapasitas host, spesifikasi VM, dan profil workload mengikuti config.
+Untuk mengisi jumlah melalui prompt:
+
+```bash
 cloudsim/bin/python fcfs/fcfs_scheduler.py --interactive
 ```
 
@@ -54,6 +64,12 @@ Edit `fcfs/config.json` untuk mengubah parameter default dan profil workload:
     "size": 10000,
     "vmm": "Xen"
   },
+  "cloudlet": {
+    "pes_number": 1,
+    "file_size": 3000,
+    "output_size": 300,
+    "submission_time": 0.0
+  },
   "workload": [
     {"name": "pendek", "length": 10000, "percentage": 50},
     {"name": "sedang", "length": 50000, "percentage": 30},
@@ -65,7 +81,18 @@ Edit `fcfs/config.json` untuk mengubah parameter default dan profil workload:
 Semua VM memakai satu blok `vm` yang sama. `length` memakai satuan MI
 (Million Instructions); `mips` adalah MI per detik; RAM dan image size memakai MiB.
 Bandwidth dan VMM dicatat sebagai spesifikasi; keduanya tidak memengaruhi rumus
-waktu eksekusi pada model ini. Input/output task tetap 3000/300 byte.
+waktu eksekusi pada model ini. Blok `cloudlet` menentukan PE yang dipakai setiap
+task, ukuran input/output (byte), dan waktu kedatangan bersama (detik).
+Ukuran input/output dicatat tanpa memodelkan waktu transfer jaringan.
+PE task harus positif dan tidak melebihi PE VM; ukuran file boleh nol dan
+waktu kedatangan harus nonnegatif.
+
+Seluruh spesifikasi `vm` dan `cloudlet` wajib diisi di config, tanpa fallback
+angka pada constructor Python. Panjang task berasal dari `workload` atau CSV.
+ID VM/task dan pembagian datacenter dihasilkan saat inisialisasi. Field seperti
+`available_at`, `status`, `vm_id`, `resource_id`, `start_time`, dan `finish_time`
+merupakan state simulasi yang diinisialisasi oleh program, bukan input config.
+Config hasil run lama perlu ditambah blok `cloudlet` sebelum digunakan kembali.
 
 | Profil | Panjang (MI) | Persentase | 1000 task | 2000 task |
 |---|---:|---:|---:|---:|
@@ -132,7 +159,22 @@ Setiap folder output memuat:
 - `results.csv`: panjang task, VM, datacenter (`resource_id`), waktu mulai,
   waktu selesai, waktu tunggu, dan waktu respons.
 - `summary.json`: jumlah task selesai, makespan, rata-rata waktu tunggu,
-  distribusi panjang task, dan distribusi VM per datacenter.
+  respons dan eksekusi, throughput, utilisasi, distribusi panjang task,
+  distribusi VM per datacenter, serta metrik tiap VM dan datacenter.
+- `vm_metrics.csv`: jumlah task, waktu busy/idle, dan utilisasi setiap VM.
+- `datacenter_metrics.csv`: jumlah VM/task, throughput, dan utilisasi setiap DC.
+- `metrics.png`: grafik rata-rata waktu task, waktu tiap task menurut ID,
+  waktu busy/idle tiap VM, dan utilisasi tiap datacenter. Makespan, throughput,
+  dan utilisasi keseluruhan tercantum di judul grafik.
+
+Throughput dihitung sebagai jumlah task dibagi makespan seluruh run (task/detik).
+Utilisasi VM adalah total waktu eksekusi dibagi makespan; utilisasi datacenter
+adalah rata-rata utilisasi VM di datacenter tersebut. VM yang tidak mendapat
+task tetap dihitung sebagai kapasitas idle. Semua task pada model ini datang
+pada `cloudlet.submission_time` (default config: nol), sehingga response time adalah waktu selesai sejak submission,
+dan waiting time adalah waktu mulai sejak submission. Grafik menggunakan backend
+noninteraktif sehingga dapat dihasilkan tanpa desktop/GUI. Dependensi grafik
+`matplotlib` tersedia di `requirements.txt`.
 
 Gunakan `--show-tasks` untuk menampilkan seluruh tabel di terminal. Gunakan folder
 `--output` berbeda untuk menyimpan beberapa percobaan; menjalankan kembali ke folder
@@ -187,17 +229,17 @@ sendiri. Untuk 2 DC dan 8 VM, tiap host berkapasitas:
 | `cpu_mode` | 1 | konstanta |
 | `num_cores` | 4 | `vm_per_dc × pes_number` |
 | RAM | 2048 MiB | `ceil(vm_per_dc × ram / 1024)` |
-| ROM | 40 MiB | `ceil(vm_per_dc × size / 1024)` |
+| ROM | 40960 MiB (40 GiB) | `ceil(vm_per_dc × size / 1024)` GiB |
 
 PyCloudSim memakai satuan millicore, sehingga 1000 = satu core penuh. Container
 VM karena itu requesting `1000 × pes_number` milicore, bukan `pes_number`.
 
-Seluruh task datang pada waktu 0 dan diproses dalam urutan input. Pembagian task
+Seluruh task datang pada waktu `cloudlet.submission_time` dan diproses dalam urutan input. Pembagian task
 ke VM dilakukan bergantian (round-robin); pada tiap VM, antrean dilayani FCFS,
 satu task pada satu waktu. Waktu task dihitung oleh kode Python:
 
 ```text
-execution_time = task_length / (vm_mips * vm_pes)
+execution_time = task_length / (vm_mips * task_pes)
 start_time     = max(submission_time, vm_available_time)
 finish_time    = start_time + execution_time
 makespan       = max(finish_time seluruh task)
@@ -216,13 +258,15 @@ cloudsim/bin/python -m unittest discover -s fcfs -v
 
 Pengujian mencakup dataset 1000/2000, kuota dan pembulatan, input CLI/interaktif,
 CSV manual, input tidak valid, VM seragam, waktu FCFS, alokasi PyCloudSim ke
-kedua datacenter, serta hasil identik setelah dataset dipakai ulang.
+kedua datacenter, hasil identik setelah dataset dipakai ulang, perhitungan metrik
+termasuk VM idle, serta kedua entry point dengan config khusus dan output grafik.
 Tes integrasi memerlukan PyCloudSim; tes perhitungan dapat berjalan dengan Python standar.
 
 ## File
 
-- `fcfs_scheduler.py`: penjadwalan, input pengguna, infrastruktur, dan output.
+- `fcfs_scheduler.py`: penjadwalan, input pengguna, metrik, grafik, dan output.
 - `workload.py`: pembuatan dataset deterministik dan pembacaan/penulisan CSV.
 - `config.json`: parameter VM, jumlah task, datacenter, dan profil dataset.
-- `fcfs_datacenter.py`: entry point alternatif yang menjalankan scheduler yang sama.
+- `fcfs_datacenter.py`: pembuatan host/container dan alokasi VM sesuai config;
+  juga menjadi entry point alternatif yang menjalankan scheduler yang sama.
 - `test_fcfs_scheduler.py`: pengujian unit dan integrasi.

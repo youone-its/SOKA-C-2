@@ -10,6 +10,12 @@
     "size": 10000,
     "vmm": "Xen"
   },
+  "cloudlet": {
+    "pes_number": 1,
+    "file_size": 3000,
+    "output_size": 300,
+    "submission_time": 0.0
+  },
   "workload": [
     {
       "name": "pendek",

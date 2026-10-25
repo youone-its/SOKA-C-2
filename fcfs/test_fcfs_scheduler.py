@@ -13,10 +13,17 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fcfs_scheduler import (
-    Cloudlet, calculate_makespan, create_cloudlets, create_vms,
+    Cloudlet, Vm, _build_summary, calculate_makespan, create_cloudlets, create_vms,
     fcfs_schedule, parse_arguments,
 )
-from workload import TaskProfile, generate_lengths, load_lengths, save_lengths
+from workload import DEFAULT_PROFILES, TaskProfile, generate_lengths, load_lengths, save_lengths
+
+
+# Spesifikasi eksplisit untuk skenario pengujian, bukan default simulator.
+VM_SPEC = {"mips": 250, "pes_number": 1, "ram": 512,
+           "bandwidth": 1000, "size": 10000, "vmm": "Xen"}
+CLOUDLET_SPEC = {"pes_number": 1, "file_size": 3000,
+                 "output_size": 300, "submission_time": 0.0}
 
 
 class WorkloadTest(unittest.TestCase):
@@ -76,18 +83,33 @@ class WorkloadTest(unittest.TestCase):
 
 
 class FCFSSchedulerTest(unittest.TestCase):
+    def test_input_specs_have_no_constructor_defaults(self):
+        with self.assertRaises(TypeError):
+            Vm(id=0)
+        with self.assertRaises(TypeError):
+            Cloudlet(id=1, length=1000)
+
+    def test_cloudlet_uses_configured_pes_and_submission_time(self):
+        vms = create_vms(2, 2, **(VM_SPEC | {"pes_number": 4}))
+        tasks = [Cloudlet(id=1, length=1000,
+                          **(CLOUDLET_SPEC | {"pes_number": 2, "submission_time": 3.5}))]
+        fcfs_schedule(tasks, vms)
+        self.assertEqual(tasks[0].start_time, 3.5)
+        self.assertEqual(tasks[0].execution_time, 2)
+        self.assertEqual(tasks[0].finish_time, 5.5)
+
     def test_vms_identical_and_distributed_to_datacenters(self):
-        vms = create_vms(10, 2, mips=500, ram=1024)
+        vms = create_vms(10, 2, **(VM_SPEC | {"mips": 500, "ram": 1024}))
         specs = [{key: value for key, value in asdict(vm).items()
                   if key not in ("id", "datacenter_id")} for vm in vms]
         self.assertTrue(all(spec == specs[0] for spec in specs))
         self.assertEqual(Counter(vm.datacenter_id for vm in vms), {0: 5, 1: 5})
-        self.assertEqual([vm.datacenter_id for vm in create_vms(5, 2)], [0, 1, 0, 1, 0])
+        self.assertEqual([vm.datacenter_id for vm in create_vms(5, 2, **VM_SPEC)], [0, 1, 0, 1, 0])
 
     def test_fcfs_queue_timing_and_datacenter_mapping(self):
-        tasks = [Cloudlet(id=i, length=length) for i, length in
+        tasks = [Cloudlet(id=i, length=length, **CLOUDLET_SPEC) for i, length in
                  enumerate((1000, 2000, 3000), start=1)]
-        fcfs_schedule(tasks, create_vms(2, 2))
+        fcfs_schedule(tasks, create_vms(2, 2, **VM_SPEC))
         self.assertEqual([task.vm_id for task in tasks], [0, 1, 0])
         self.assertEqual([task.resource_id for task in tasks], [0, 1, 0])
         self.assertEqual([task.start_time for task in tasks], [0, 0, 4])
@@ -96,19 +118,95 @@ class FCFSSchedulerTest(unittest.TestCase):
         self.assertEqual(calculate_makespan(tasks), 16)
 
     def test_cloudlet_ids_start_at_one(self):
-        self.assertEqual([task.id for task in create_cloudlets(3)], [1, 2, 3])
+        self.assertEqual([task.id for task in create_cloudlets(3, DEFAULT_PROFILES, **CLOUDLET_SPEC)], [1, 2, 3])
+
+    def test_metrics_include_queue_time_and_idle_capacity(self):
+        tasks = [Cloudlet(id=i, length=length, **CLOUDLET_SPEC) for i, length in
+                 enumerate((1000, 2000, 3000), start=1)]
+        vms = create_vms(2, 2, **VM_SPEC)
+        fcfs_schedule(tasks, vms)
+        summary = _build_summary({"datacenters": 2}, vms, tasks, None)
+        self.assertEqual(summary["makespan_s"], 16)
+        self.assertAlmostEqual(summary["mean_waiting_time_s"], 4 / 3)
+        self.assertEqual(summary["mean_execution_time_s"], 8)
+        self.assertAlmostEqual(summary["mean_response_time_s"], 28 / 3)
+        self.assertEqual(summary["throughput_tasks_per_s"], 3 / 16)
+        self.assertEqual(summary["utilization_pct"], 75)
+        self.assertEqual(summary["vm_metrics"][1]["idle_time_s"], 8)
+        self.assertEqual(summary["datacenter_metrics"][0]["tasks"], 2)
+        self.assertEqual(summary["datacenter_metrics"][1]["utilization_pct"], 50)
+
+    def test_metrics_include_unused_vms_and_datacenters(self):
+        vms = create_vms(3, 2, **VM_SPEC)
+        tasks = fcfs_schedule([Cloudlet(id=1, length=1000, **CLOUDLET_SPEC)], vms)
+        summary = _build_summary({"datacenters": 2}, vms, tasks, None)
+        self.assertEqual(summary["vm_metrics"][2]["tasks"], 0)
+        self.assertEqual(summary["vm_metrics"][2]["idle_time_s"], 4)
+        self.assertEqual(summary["datacenter_metrics"][1]["utilization_pct"], 0)
+        self.assertAlmostEqual(summary["utilization_pct"], 100 / 3)
 
     def test_invalid_vm_specs(self):
         for spec in ({"mips": 0}, {"ram": -1}, {"pes_number": True}, {"vmm": ""}):
             with self.subTest(spec=spec), self.assertRaises(ValueError):
-                create_vms(2, 2, **spec)
+                create_vms(2, 2, **(VM_SPEC | spec))
         with self.assertRaises(ValueError):
-            create_vms(1, 2)
+            create_vms(1, 2, **VM_SPEC)
         with self.assertRaises(ValueError):
             fcfs_schedule([], [])
 
 
 class UserInputTest(unittest.TestCase):
+    def test_missing_or_invalid_input_specs_are_rejected(self):
+        original = json.loads(Path(__file__).with_name("config.json").read_text())
+        changes = [
+            ("vm", "mips", None), ("cloudlet", None, None),
+            ("cloudlet", "pes_number", None),
+            ("cloudlet", "pes_number", 0), ("cloudlet", "pes_number", 2),
+            ("cloudlet", "file_size", -1), ("cloudlet", "output_size", True),
+            ("cloudlet", "submission_time", -1),
+            ("cloudlet", "submission_time", float("nan")),
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "config.json"
+            for section, key, value in changes:
+                config = json.loads(json.dumps(original))
+                if key is None:
+                    del config[section]
+                elif value is None:
+                    del config[section][key]
+                else:
+                    config[section][key] = value
+                path.write_text(json.dumps(config))
+                with self.subTest(change=(section, key, value)):
+                    with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit):
+                        parse_arguments(["--config", str(path)])
+
+    def test_all_configuration_values_are_used(self):
+        config = {
+            "tasks": 12, "vms": 3, "datacenters": 2,
+            "vm": {"mips": 500, "pes_number": 2, "ram": 1024,
+                   "bandwidth": 2000, "size": 20000, "vmm": "KVM"},
+            "cloudlet": {"pes_number": 2, "file_size": 4000,
+                         "output_size": 600, "submission_time": 0.0},
+            "workload": [{"name": "custom", "length": 2000, "percentage": 100}],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "config.json"
+            path.write_text(json.dumps(config))
+            _, effective, vms, tasks = parse_arguments(["--config", str(path)])
+        self.assertEqual(effective, config)
+        self.assertEqual(len(vms), 3)
+        self.assertEqual(Counter(vm.datacenter_id for vm in vms), {0: 2, 1: 1})
+        for vm in vms:
+            for key, value in config["vm"].items():
+                self.assertEqual(getattr(vm, key), value)
+        self.assertEqual([task.length for task in tasks], [2000] * 12)
+        for task in tasks:
+            for key, value in config["cloudlet"].items():
+                self.assertEqual(getattr(task, key), value)
+        fcfs_schedule(tasks, vms)
+        self.assertEqual(calculate_makespan(tasks), 8)
+
     def test_cli_override(self):
         _, config, vms, tasks = parse_arguments(["--tasks", "2000", "--vms", "10"])
         self.assertEqual((len(tasks), len(vms), config["datacenters"]), (2000, 10, 2))
@@ -146,6 +244,42 @@ class UserInputTest(unittest.TestCase):
 
 @unittest.skipUnless(importlib.util.find_spec("PyCloudSim"), "PyCloudSim belum terpasang")
 class InfrastructureIntegrationTest(unittest.TestCase):
+    def test_both_entry_points_follow_custom_config_and_export_graph(self):
+        config = {
+            "tasks": 12, "vms": 3, "datacenters": 2,
+            "vm": {"mips": 500, "pes_number": 2, "ram": 1024,
+                   "bandwidth": 2000, "size": 20000, "vmm": "KVM"},
+            "cloudlet": {"pes_number": 2, "file_size": 4000,
+                         "output_size": 600, "submission_time": 0.0},
+            "workload": [{"name": "custom", "length": 2000, "percentage": 100}],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = root / "input.json"
+            path.write_text(json.dumps(config))
+            for name in ("fcfs_scheduler", "fcfs_datacenter"):
+                with self.subTest(entry_point=name):
+                    output = root / name
+                    result = subprocess.run(
+                        [sys.executable, str(Path(__file__).with_name(name + ".py")),
+                         "--config", str(path), "--output", str(output)],
+                        capture_output=True, text=True, timeout=30,
+                    )
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    self.assertEqual(json.loads((output / "config.json").read_text()), config)
+                    summary = json.loads((output / "summary.json").read_text())
+                    self.assertEqual(summary["completed"], 12)
+                    self.assertEqual(summary["makespan_s"], 8)
+                    self.assertEqual(summary["utilization_pct"], 100)
+                    self.assertEqual(summary["vm_distribution"], {"0": 2, "1": 1})
+                    self.assertEqual((output / "metrics.png").read_bytes()[:8], b"\x89PNG\r\n\x1a\n")
+                    with (output / "vm_metrics.csv").open() as source:
+                        rows = list(csv.DictReader(source))
+                    self.assertEqual([int(row["tasks"]) for row in rows], [4, 4, 4])
+                    with (output / "datacenter_metrics.csv").open() as source:
+                        rows = list(csv.DictReader(source))
+                    self.assertEqual([int(row["tasks"]) for row in rows], [8, 4])
+
     def test_actual_allocation_export_and_dataset_reuse(self):
         script = Path(__file__).with_name("fcfs_scheduler.py")
         with tempfile.TemporaryDirectory() as directory:
