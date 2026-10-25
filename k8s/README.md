@@ -126,6 +126,43 @@ config, menjalankan broker, lalu menyalin hasil ke
 Setelah mengubah kode Python, jalankan `k8s/fcfs-k8s.sh build` lalu hapus pod VM
 agar memakai image baru: `kubectl -n fcfs delete pod -l app.kubernetes.io/name=fcfs-vm`.
 
+### Memeriksa cluster (untuk demo)
+
+| Perintah | Yang ditunjukkan |
+|---|---|
+| `kubectl get nodes -L topology.kubernetes.io/zone` | node = datacenter/host (kolom `ZONE`) |
+| `kubectl -n fcfs get pods -o wide` | pod VM dan node tempatnya (kolom `NODE`) |
+| `kubectl -n fcfs logs -f job/fcfs-broker` | log broker saat `run` berjalan |
+| `kubectl -n fcfs describe pod fcfs-vm-dc0-0` | batas VM dari config: CPU `250m`, memori `512Mi` |
+
+Contoh output dengan config default (2 datacenter, 8 VM):
+
+```console
+$ kubectl get nodes -L topology.kubernetes.io/zone
+NAME                      STATUS   ROLES           AGE   VERSION   ZONE
+soka-fcfs-control-plane   Ready    control-plane   32m   v1.37.0
+soka-fcfs-worker          Ready    <none>          32m   v1.37.0   dc-0
+soka-fcfs-worker2         Ready    <none>          32m   v1.37.0   dc-1
+
+$ kubectl -n fcfs get pods -o wide
+NAME                READY   STATUS      ...   NODE
+fcfs-broker-hdtxk   0/1     Completed   ...   soka-fcfs-control-plane
+fcfs-vm-dc0-0       1/1     Running     ...   soka-fcfs-worker
+fcfs-vm-dc0-1       1/1     Running     ...   soka-fcfs-worker
+...                                           (8 pod VM: dc0-0..3, dc1-0..3)
+
+$ kubectl -n fcfs describe pod fcfs-vm-dc0-0
+    Limits:
+      cpu:     250m
+      memory:  512Mi
+    Requests:
+      cpu:      250m
+      memory:   512Mi
+```
+
+Node control-plane tidak berlabel zone karena bukan datacenter. Ia menjalankan
+Kubernetes sendiri dan broker FCFS, supaya broker tidak memakai CPU VM.
+
 ## 3. Langkah manual (untuk memahami tiap komponen)
 
 Skrip hanya merangkai perintah berikut. Jalankan satu per satu saat belajar.
