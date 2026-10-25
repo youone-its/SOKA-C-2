@@ -1,0 +1,9 @@
+vm_id,datacenter_id,endpoint,pod,node,cpu_limit_millicores,memory_limit_mib,effective_mips
+0,0,http://fcfs-vm-dc0-0.fcfs-vm-dc0:8080,fcfs-vm-dc0-0,soka-fcfs-worker,250,512,76020.36139299303
+1,1,http://fcfs-vm-dc1-0.fcfs-vm-dc1:8080,fcfs-vm-dc1-0,soka-fcfs-worker2,250,512,64620.149176401465
+2,0,http://fcfs-vm-dc0-1.fcfs-vm-dc0:8080,fcfs-vm-dc0-1,soka-fcfs-worker,250,512,75929.30925371454
+3,1,http://fcfs-vm-dc1-1.fcfs-vm-dc1:8080,fcfs-vm-dc1-1,soka-fcfs-worker2,250,512,77027.96245860936
+4,0,http://fcfs-vm-dc0-2.fcfs-vm-dc0:8080,fcfs-vm-dc0-2,soka-fcfs-worker,250,512,75067.80254043257
+5,1,http://fcfs-vm-dc1-2.fcfs-vm-dc1:8080,fcfs-vm-dc1-2,soka-fcfs-worker2,250,512,75684.21150171319
+6,0,http://fcfs-vm-dc0-3.fcfs-vm-dc0:8080,fcfs-vm-dc0-3,soka-fcfs-worker,250,512,74861.91888748351
+7,1,http://fcfs-vm-dc1-3.fcfs-vm-dc1:8080,fcfs-vm-dc1-3,soka-fcfs-worker2,250,512,75063.43123686407

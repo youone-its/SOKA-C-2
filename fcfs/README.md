@@ -270,3 +270,9 @@ Tes integrasi memerlukan PyCloudSim; tes perhitungan dapat berjalan dengan Pytho
 - `fcfs_datacenter.py`: pembuatan host/container dan alokasi VM sesuai config;
   juga menjadi entry point alternatif yang menjalankan scheduler yang sama.
 - `test_fcfs_scheduler.py`: pengujian unit dan integrasi.
+- `fcfs_worker.py`: VM nyata berupa HTTP service yang mengeksekusi task CPU-bound.
+- `fcfs_broker.py`: broker FCFS yang mengirim task ke VM nyata dengan config,
+  dataset, pembagian VM, dan format hasil yang sama dengan simulasi.
+- `test_fcfs_broker.py`: pengujian worker dan broker dengan VM HTTP lokal.
+
+Eksekusi nyata di Kubernetes dijelaskan di [k8s/README.md](../k8s/README.md).

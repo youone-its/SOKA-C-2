@@ -1,0 +1,98 @@
+# VM satu datacenter, dirender oleh k8s/render.py dari fcfs/config.json.
+# Pod fcfs-vm-dc<D>-<i> = VM ID i * jumlah datacenter + D, sama dengan simulasi.
+# Placeholder template:
+#   DATACENTER_ID  : nomor datacenter (node berlabel zone dc-<D>)
+#   REPLICAS       : jumlah VM di datacenter ini (create_vms di fcfs_scheduler.py)
+#   CPU_MILLICORES : vm.mips x vm.pes_number (1 MIPS = 1 millicore)
+#   MEMORY_MIB     : vm.ram
+#   DATACENTERS    : jumlah datacenter
+# requests = limits -> QoS Guaranteed: kapasitas VM benar-benar dicadangkan.
+apiVersion: v1
+kind: Service
+metadata:
+  name: fcfs-vm-dc${DATACENTER_ID}
+  namespace: fcfs
+  labels:
+    app.kubernetes.io/name: fcfs-vm
+    fcfs.soka/datacenter: "${DATACENTER_ID}"
+spec:
+  clusterIP: None # headless: DNS per pod, broker sendiri yang memilih VM
+  selector:
+    app.kubernetes.io/name: fcfs-vm
+    fcfs.soka/datacenter: "${DATACENTER_ID}"
+  ports:
+    - name: http
+      port: 8080
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: fcfs-vm-dc${DATACENTER_ID}
+  namespace: fcfs
+  labels:
+    app.kubernetes.io/name: fcfs-vm
+    fcfs.soka/datacenter: "${DATACENTER_ID}"
+spec:
+  serviceName: fcfs-vm-dc${DATACENTER_ID}
+  replicas: ${REPLICAS}
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: fcfs-vm
+      fcfs.soka/datacenter: "${DATACENTER_ID}"
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: fcfs-vm
+        fcfs.soka/datacenter: "${DATACENTER_ID}"
+    spec:
+      nodeSelector:
+        topology.kubernetes.io/zone: dc-${DATACENTER_ID}
+      enableServiceLinks: false
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: vm
+          image: fcfs-k8s:dev
+          command: ["python", "fcfs_worker.py"]
+          env:
+            - name: DATACENTER_ID
+              value: "${DATACENTER_ID}"
+            - name: DATACENTERS
+              value: "${DATACENTERS}"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+          ports:
+            - name: http
+              containerPort: 8080
+          resources:
+            requests:
+              cpu: ${CPU_MILLICORES}m
+              memory: ${MEMORY_MIB}Mi
+            limits:
+              cpu: ${CPU_MILLICORES}m
+              memory: ${MEMORY_MIB}Mi
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 6
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]

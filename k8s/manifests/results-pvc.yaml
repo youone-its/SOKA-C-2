@@ -1,0 +1,11 @@
+# Penyimpanan hasil broker; diambil ke laptop dengan pod results-reader.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fcfs-results
+  namespace: fcfs
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi

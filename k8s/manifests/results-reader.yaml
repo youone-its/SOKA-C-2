@@ -1,0 +1,35 @@
+# Pod sementara untuk menyalin hasil dari PVC:
+#   kubectl -n fcfs cp fcfs-results-reader:/results/fcfs-k8s results/k8s-fcfs
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fcfs-results-reader
+  namespace: fcfs
+spec:
+  restartPolicy: Never
+  enableServiceLinks: false
+  terminationGracePeriodSeconds: 1 # sleep sebagai PID 1 mengabaikan SIGTERM
+  # Volume lokal terikat ke node broker; toleration agar boleh ikut ke sana.
+  tolerations:
+    - key: node-role.kubernetes.io/control-plane
+      operator: Exists
+      effect: NoSchedule
+  securityContext:
+    runAsNonRoot: true
+  containers:
+    - name: reader
+      image: fcfs-k8s:dev
+      command: ["sleep", "600"]
+      volumeMounts:
+        - name: results
+          mountPath: /results
+          readOnly: true
+      securityContext:
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+        capabilities:
+          drop: [ALL]
+  volumes:
+    - name: results
+      persistentVolumeClaim:
+        claimName: fcfs-results

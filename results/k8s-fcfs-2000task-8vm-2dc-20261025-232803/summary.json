@@ -1,0 +1,117 @@
+{
+  "algorithm": "FCFS",
+  "datacenters": 2,
+  "vms": 8,
+  "tasks": 2000,
+  "completed": 2000,
+  "makespan_s": 174.42552449699997,
+  "mean_waiting_time_s": 67.82559291555762,
+  "mean_response_time_s": 68.37235989201614,
+  "mean_execution_time_s": 0.5467669764585202,
+  "throughput_tasks_per_s": 11.466211758671816,
+  "utilization_pct": 78.36682418402653,
+  "vm_metrics": [
+    {
+      "vm_id": 0,
+      "datacenter_id": 0,
+      "tasks": 250,
+      "busy_time_s": 118.05815101100598,
+      "idle_time_s": 56.367373485993994,
+      "utilization_pct": 67.68398796647249
+    },
+    {
+      "vm_id": 1,
+      "datacenter_id": 1,
+      "tasks": 250,
+      "busy_time_s": 174.422631232007,
+      "idle_time_s": 0.0028932649929629406,
+      "utilization_pct": 99.99834126054584
+    },
+    {
+      "vm_id": 2,
+      "datacenter_id": 0,
+      "tasks": 250,
+      "busy_time_s": 119.94488204499703,
+      "idle_time_s": 54.48064245200294,
+      "utilization_pct": 68.76567084484245
+    },
+    {
+      "vm_id": 3,
+      "datacenter_id": 1,
+      "tasks": 250,
+      "busy_time_s": 142.0769111830068,
+      "idle_time_s": 32.348613313993155,
+      "utilization_pct": 81.4541974821182
+    },
+    {
+      "vm_id": 4,
+      "datacenter_id": 0,
+      "tasks": 250,
+      "busy_time_s": 121.00494389201413,
+      "idle_time_s": 53.420580604985844,
+      "utilization_pct": 69.37341552560179
+    },
+    {
+      "vm_id": 5,
+      "datacenter_id": 1,
+      "tasks": 250,
+      "busy_time_s": 149.51552576800623,
+      "idle_time_s": 24.90999872899374,
+      "utilization_pct": 85.71883398325559
+    },
+    {
+      "vm_id": 6,
+      "datacenter_id": 0,
+      "tasks": 250,
+      "busy_time_s": 120.50075892700897,
+      "idle_time_s": 53.924765569990996,
+      "utilization_pct": 69.0843609468874
+    },
+    {
+      "vm_id": 7,
+      "datacenter_id": 1,
+      "tasks": 250,
+      "busy_time_s": 148.0101488589944,
+      "idle_time_s": 26.41537563800557,
+      "utilization_pct": 84.85578546248837
+    }
+  ],
+  "datacenter_metrics": [
+    {
+      "datacenter_id": 0,
+      "vms": 4,
+      "tasks": 1000,
+      "throughput_tasks_per_s": 5.733105879335908,
+      "utilization_pct": 68.72685882095104
+    },
+    {
+      "datacenter_id": 1,
+      "vms": 4,
+      "tasks": 1000,
+      "throughput_tasks_per_s": 5.733105879335908,
+      "utilization_pct": 88.006789547102
+    }
+  ],
+  "dataset_source": "profile",
+  "distribution": [
+    {
+      "length_mi": 10000,
+      "tasks": 1000,
+      "percentage": 50.0
+    },
+    {
+      "length_mi": 50000,
+      "tasks": 600,
+      "percentage": 30.0
+    },
+    {
+      "length_mi": 100000,
+      "tasks": 400,
+      "percentage": 20.0
+    }
+  ],
+  "vm_distribution": {
+    "0": 4,
+    "1": 4
+  }
+}

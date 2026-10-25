@@ -1,12 +1,23 @@
-## Implementasi FCFS Python
+# SOKA: FCFS dari simulasi ke Kubernetes
 
-Versi Python menyediakan VM seragam, minimal dua datacenter, dataset task berdasarkan
-persentase yang konsisten, serta input pengguna dan dataset CSV yang bisa dipakai ulang.
-Lihat [panduan FCFS Python](fcfs/README.md) untuk konfigurasi dan contoh 1000/2000 task.
+Repositori ini memuat algoritma penjadwalan **FCFS** dalam dua bentuk yang memakai
+config yang sama, [`fcfs/config.json`](fcfs/config.json):
+
+| Bagian | Isi | Panduan |
+|---|---|---|
+| Simulasi | FCFS dengan PyCloudSim: waktu dihitung dari `length / mips` | [fcfs/README.md](fcfs/README.md) |
+| Real case | FCFS di cluster Kubernetes: VM = pod, datacenter = node, broker = Job; waktu diukur | [k8s/README.md](k8s/README.md) |
+| Hasil | dataset, CSV, ringkasan, dan grafik setiap percobaan | [`results/`](results) |
 
 ```bash
-cloudsim/bin/python fcfs/fcfs_scheduler.py --interactive
+# Simulasi
+cloudsim/bin/python fcfs/fcfs_scheduler.py --config fcfs/config.json --output results/sim
+
+# Real case di Kubernetes (butuh docker, kind, kubectl)
+k8s/fcfs-k8s.sh all
 ```
+
+Implementasi Java CloudSim asli ada di `modules/`; dokumentasi aslinya berada di bawah ini.
 
 # CloudSim: A Framework For Modeling And Simulation Of Cloud Computing Infrastructures And Services #
 

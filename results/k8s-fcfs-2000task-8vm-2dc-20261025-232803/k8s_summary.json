@@ -1,0 +1,63 @@
+{
+  "work_per_mi": 20,
+  "configured_mips": 250,
+  "effective_mips": 73698.85653032485,
+  "speedup_vs_simulation": 294.7954261212994,
+  "mean_worker_exec_time_s": 0.5427492621074957,
+  "mean_overhead_s": 0.004017714351024552,
+  "cpu_share_pct": 25.010343136885734,
+  "nodes": [
+    "soka-fcfs-worker",
+    "soka-fcfs-worker2"
+  ],
+  "comparison": [
+    {
+      "metric": "makespan_s",
+      "label": "Makespan",
+      "simulation": 44000.0,
+      "predicted": 149.2560470795613,
+      "measured": 174.42552449699997,
+      "ratio_pct": 116.8632882284642
+    },
+    {
+      "metric": "mean_waiting_time_s",
+      "label": "Rata-rata waiting",
+      "simulation": 19920.0,
+      "predicted": 67.57228313238322,
+      "measured": 67.82559291555762,
+      "ratio_pct": 100.37487231662445
+    },
+    {
+      "metric": "mean_response_time_s",
+      "label": "Rata-rata response",
+      "simulation": 20080.0,
+      "predicted": 68.11503239449071,
+      "measured": 68.37235989201614,
+      "ratio_pct": 100.37778371158235
+    },
+    {
+      "metric": "mean_execution_time_s",
+      "label": "Rata-rata eksekusi",
+      "simulation": 160.0,
+      "predicted": 0.5427492621074957,
+      "measured": 0.5467669764585202,
+      "ratio_pct": 100.74025238383996
+    },
+    {
+      "metric": "throughput_tasks_per_s",
+      "label": "Throughput",
+      "simulation": 0.045454545454545456,
+      "predicted": 13.399792096422699,
+      "measured": 11.466211758671816,
+      "ratio_pct": 85.570072103827
+    },
+    {
+      "metric": "utilization_pct",
+      "label": "Utilisasi",
+      "simulation": 90.9090909090909,
+      "predicted": 90.9090909090909,
+      "measured": 78.36682418402653,
+      "ratio_pct": 86.20350660242919
+    }
+  ]
+}

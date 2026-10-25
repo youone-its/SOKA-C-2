@@ -234,8 +234,12 @@ def _apply_user_input(config: dict, args: argparse.Namespace) -> None:
             config[key] = int(answer)
 
 
-def parse_arguments(argv: Sequence[str] | None = None):
-    parser = _create_argument_parser()
+def parse_arguments(
+    argv: Sequence[str] | None = None,
+    parser: argparse.ArgumentParser | None = None,
+):
+    """Parser dapat diperluas entry point lain, misalnya broker Kubernetes."""
+    parser = parser or _create_argument_parser()
     args = parser.parse_args(argv)
     try:
         config, profiles = _load_configuration(args.config)

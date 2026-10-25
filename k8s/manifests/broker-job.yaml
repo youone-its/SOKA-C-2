@@ -1,0 +1,66 @@
+# Broker FCFS: Job sekali jalan yang mengirim seluruh task ke VM.
+# Config dibaca dari ConfigMap fcfs-config (isi fcfs/config.json),
+# hasil ditulis ke PVC fcfs-results.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: fcfs-broker
+  namespace: fcfs
+spec:
+  backoffLimit: 0 # eksperimen yang gagal tidak diulang diam-diam
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: fcfs-broker
+    spec:
+      restartPolicy: Never
+      enableServiceLinks: false
+      # Broker diutamakan di node control-plane agar tidak memakai CPU datacenter.
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: node-role.kubernetes.io/control-plane
+                    operator: Exists
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: broker
+          image: fcfs-k8s:dev
+          command: ["python", "fcfs_broker.py"]
+          args: ["--config", "/config/config.json", "--output", "/results/fcfs-k8s"]
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+          volumeMounts:
+            - name: config
+              mountPath: /config
+              readOnly: true
+            - name: results
+              mountPath: /results
+            - name: tmp
+              mountPath: /tmp
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+      volumes:
+        - name: config
+          configMap:
+            name: fcfs-config
+        - name: results
+          persistentVolumeClaim:
+            claimName: fcfs-results
+        - name: tmp
+          emptyDir: {}
