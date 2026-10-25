@@ -285,6 +285,9 @@ Lingkungan: laptop AMD Ryzen 7 6800H (8 core / 16 thread), kind dengan 1 control
 `work_per_mi` 20. Kolom **Simulasi** adalah hasil `fcfs_schedule` untuk dataset yang
 sama (identik dengan `fcfs_scheduler.py`); **Prediksi** adalah simulasi yang
 diskalakan ke detik nyata dengan speedup terukur (sekitar 295×).
+Degree of imbalance untuk dua run ini dihitung dari `vm_metrics.csv`, karena run
+tersebut dibuat sebelum metrik ini ditambahkan; run baru menulisnya langsung di
+`summary.json` dan `k8s_comparison.csv`.
 
 **1000 task**: [`results/k8s-fcfs-1000task-8vm-2dc-20261025-232457`](../results/k8s-fcfs-1000task-8vm-2dc-20261025-232457)
 
@@ -296,6 +299,7 @@ diskalakan ke detik nyata dengan speedup terukur (sekitar 295×).
 | Rata-rata eksekusi | 160 s | 0,541 s | 0,544 s | 100,6% |
 | Throughput | 0,0455 task/s | 13,44 task/s | 11,70 task/s | 87,1% |
 | Utilisasi | 90,91% | 90,91% | 79,65% | 87,6% |
+| Degree of imbalance | 0,200 | 0,200 | 0,379 | 189,2% |
 
 ![Grafik FCFS Kubernetes 1000 task](../results/k8s-fcfs-1000task-8vm-2dc-20261025-232457/k8s_metrics.png)
 
@@ -309,6 +313,7 @@ diskalakan ke detik nyata dengan speedup terukur (sekitar 295×).
 | Rata-rata eksekusi | 160 s | 0,543 s | 0,547 s | 100,7% |
 | Throughput | 0,0455 task/s | 13,40 task/s | 11,47 task/s | 85,6% |
 | Utilisasi | 90,91% | 90,91% | 78,37% | 86,2% |
+| Degree of imbalance | 0,200 | 0,200 | 0,412 | 206,2% |
 
 ![Grafik FCFS Kubernetes 2000 task](../results/k8s-fcfs-2000task-8vm-2dc-20261025-232803/k8s_metrics.png)
 
@@ -322,7 +327,10 @@ diskalakan ke detik nyata dengan speedup terukur (sekitar 295×).
    63.000–65.000 MIPS efektif, sekitar 15% di bawah VM lain (±75.000), pada kedua run.
    Karena makespan = waktu selesai VM terakhir, makespan naik 15–17%, sedangkan VM lain
    menganggur menunggu sehingga throughput dan utilisasi turun. Simulasi menganggap
-   semua VM identik, jadi efek ini tidak terlihat di sana. FCFS dengan pembagian statis
+   semua VM identik, jadi efek ini tidak terlihat di sana. Degree of imbalance
+   (selisih busy time VM tersibuk dan tersepi dibagi rata-ratanya) naik dari 0,20 di
+   simulasi menjadi 0,38–0,41. Nilai 0,20 di simulasi berasal dari pola workload yang
+   memberi VM di DC 1 lebih banyak task panjang. FCFS dengan pembagian statis
    (`task i → VM i mod N`) juga tidak bisa mengalihkan task dari VM yang lambat; ini
    kelemahan FCFS yang menjadi motivasi algoritma yang memperhitungkan beban VM.
    Pada dua run sebelumnya dengan config yang sama (pod lain), rasio makespan 99,9%

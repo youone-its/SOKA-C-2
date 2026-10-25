@@ -132,6 +132,8 @@ class FCFSSchedulerTest(unittest.TestCase):
         self.assertAlmostEqual(summary["mean_response_time_s"], 28 / 3)
         self.assertEqual(summary["throughput_tasks_per_s"], 3 / 16)
         self.assertEqual(summary["utilization_pct"], 75)
+        # Busy VM 0 = 16 s, VM 1 = 8 s: (16 - 8) / 12.
+        self.assertAlmostEqual(summary["imbalance_degree"], 2 / 3)
         self.assertEqual(summary["vm_metrics"][1]["idle_time_s"], 8)
         self.assertEqual(summary["datacenter_metrics"][0]["tasks"], 2)
         self.assertEqual(summary["datacenter_metrics"][1]["utilization_pct"], 50)
@@ -144,6 +146,8 @@ class FCFSSchedulerTest(unittest.TestCase):
         self.assertEqual(summary["vm_metrics"][2]["idle_time_s"], 4)
         self.assertEqual(summary["datacenter_metrics"][1]["utilization_pct"], 0)
         self.assertAlmostEqual(summary["utilization_pct"], 100 / 3)
+        # Busy 4, 0, 0 s: (4 - 0) / (4 / 3).
+        self.assertAlmostEqual(summary["imbalance_degree"], 3)
 
     def test_invalid_vm_specs(self):
         for spec in ({"mips": 0}, {"ram": -1}, {"pes_number": True}, {"vmm": ""}):

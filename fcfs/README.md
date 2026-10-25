@@ -243,7 +243,11 @@ execution_time = task_length / (vm_mips * task_pes)
 start_time     = max(submission_time, vm_available_time)
 finish_time    = start_time + execution_time
 makespan       = max(finish_time seluruh task)
+imbalance      = (busy VM maks - busy VM min) / busy VM rata-rata
 ```
+
+`imbalance_degree` di `summary.json` bernilai 0 jika semua VM sama sibuk; makin
+besar, makin timpang beban antar VM.
 
 PyCloudSim menangani infrastruktur; jadwal task memakai perhitungan tersebut.
 Model ini belum menghitung transfer jaringan atau kompetisi I/O antar datacenter.

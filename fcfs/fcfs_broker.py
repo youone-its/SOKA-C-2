@@ -35,7 +35,8 @@ from fcfs_scheduler import (
 # Pod StatefulSet fcfs-vm-dc<D>-<i> di balik headless Service fcfs-vm-dc<D>.
 DEFAULT_ENDPOINT = "http://fcfs-vm-dc{datacenter_id}-{index}.fcfs-vm-dc{datacenter_id}:8080"
 
-# Prediksi simulasi dalam detik nyata: waktu dibagi speedup, throughput dikali.
+# Prediksi simulasi dalam detik nyata: waktu dibagi speedup, throughput dikali,
+# metrik tanpa satuan waktu (utilisasi, imbalance) tetap.
 COMPARED_METRICS = (
     ("makespan_s", "Makespan", -1),
     ("mean_waiting_time_s", "Rata-rata waiting", -1),
@@ -43,6 +44,7 @@ COMPARED_METRICS = (
     ("mean_execution_time_s", "Rata-rata eksekusi", -1),
     ("throughput_tasks_per_s", "Throughput", 1),
     ("utilization_pct", "Utilisasi", 0),
+    ("imbalance_degree", "Degree of imbalance", 0),
 )
 
 # Token warna grafik (palet tervalidasi skill dataviz, mode terang).
@@ -315,7 +317,8 @@ def plot_cluster_metrics(output: Path, tasks: List[Cloudlet], placement: List[di
 
     # 2. Deviasi dari model: terukur dibagi prediksi simulasi (100% = sesuai model).
     rows = [row for row in cluster["comparison"]
-            if row["ratio_pct"] is not None and row["metric"] != "throughput_tasks_per_s"]
+            if row["ratio_pct"] is not None
+            and row["metric"] not in ("throughput_tasks_per_s", "imbalance_degree")]
     positions = range(len(rows))
     values = [row["ratio_pct"] for row in rows]
     ratio.barh(positions, values, height=0.46, color=SERIES[0])

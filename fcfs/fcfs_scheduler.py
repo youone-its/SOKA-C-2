@@ -335,6 +335,10 @@ def _build_summary(
         "mean_execution_time_s": sum(task.execution_time for task in tasks) / task_count,
         "throughput_tasks_per_s": task_count / makespan,
         "utilization_pct": 100 * sum(busy_times.values()) / (len(vms) * makespan),
+        # Degree of imbalance: (busy maks - busy min) / busy rata-rata antar VM; 0 = seimbang.
+        "imbalance_degree": (max(vm["busy_time_s"] for vm in vm_metrics)
+                             - min(vm["busy_time_s"] for vm in vm_metrics))
+                            / (sum(vm["busy_time_s"] for vm in vm_metrics) / len(vm_metrics)),
         "vm_metrics": vm_metrics,
         "datacenter_metrics": datacenter_metrics,
         "dataset_source": str(dataset_source) if dataset_source else "profile",
